@@ -33,6 +33,7 @@ app.use(function *(){
   }
 
   // return all the filenames as an array
+  // after all the files have finished downloading
   this.body = yield* ch.end();
 })
 
