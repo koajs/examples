@@ -8,6 +8,8 @@
     "koa": "koajs/koa",
     "koa-session": "koajs/session",
     "co-busboy": "cojs/busboy",
+    "save-to": "~1.0.0",
+    "archan": "~0.2.0",
     "raw-body": "~1.1.1"
   },
   "devDependencies": {
