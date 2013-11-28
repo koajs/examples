@@ -21,7 +21,7 @@ app.use(function *(next){
   if (body[0] != '{') this.throw(400, 'request body must be a JSON object');
 
   try {
-    return this.body = JSON.parse(body);
+    this.body = JSON.parse(body);
   } catch (err) {
     err.status = 400;
     throw err;
@@ -42,7 +42,7 @@ app.use(function *(next){
   });
 
   try {
-    return this.body = qs.parse(body);
+    this.body = qs.parse(body);
   } catch (err) {
     err.status = 400;
     throw err;
