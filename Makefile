@@ -3,6 +3,6 @@ test:
 		--harmony-generators \
 		--reporter spec \
 		--require should \
-		examples/*/test.js
+		*/test.js
 
 .PHONY: test
