@@ -25,7 +25,7 @@ app.use(function *(){
   while (part = yield parts) {
     // save each part to a file,
     // but do it in a different channel
-    // so we don't block
+    // so we don't block this particular while loop.
     saveTo(part, path.join(tmpdir, part.filename), ch.push());
   }
 
@@ -36,7 +36,7 @@ app.use(function *(){
     files.push(file)
   }
 
-  // return the files
+  // return the array of filenames
   this.body = files;
 })
 
