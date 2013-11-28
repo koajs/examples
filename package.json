@@ -1,0 +1,25 @@
+{
+  "name": "koa-examples",
+  "description": "Examples using Koa",
+  "version": "0.0.1",
+  "repository": "https://github.com/koajs/examples",
+  "bugs": "https://github.com/koajs/examples/issues",
+  "dependencies": {
+    "koa": "koajs/koa",
+    "koa-session": "koajs/session",
+    "co-busboy": "cojs/busboy",
+    "raw-body": "~1.1.1"
+  },
+  "devDependencies": {
+    "mocha": "*",
+    "should": "*",
+    "supertest": "*"
+  },
+  "scripts": {
+    "test": "NODE_ENV=test make test"
+  },
+  "engines": {
+    "node": ">= 11.3"
+  },
+  "license": "MIT"
+}
