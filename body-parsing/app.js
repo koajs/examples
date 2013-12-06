@@ -1,3 +1,13 @@
+/**
+ * Example for handling JSON and urlencoded request bodies.
+ * All the throws at the beginning of the middleware are all app-dependent and may not be suited for your use-case.
+ * For the actual body parsing (yield rawBody and down),
+ * you most may be interested in modules that already do this for you:
+ *
+ * - [body](https://github.com/raynos/body)
+ * - [co-body](https://github.com/visionmedia/co-body)
+ */
+
 var koa = require('koa');
 var qs = require('querystring');
 var rawBody = require('raw-body');

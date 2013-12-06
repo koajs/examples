@@ -1,3 +1,8 @@
+/**
+ * A very simple flash example.
+ * Only uses JSON for simplicity.
+ */
+
 var koa = require('koa');
 var rawBody = require('raw-body');
 var session = require('koa-session');
