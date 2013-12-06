@@ -6,6 +6,7 @@
   "bugs": "https://github.com/koajs/examples/issues",
   "dependencies": {
     "koa": "koajs/koa",
+    "koa-compose": "koajs/compose",
     "koa-session": "koajs/session",
     "co-busboy": "cojs/busboy",
     "save-to": "~1.0.0",
