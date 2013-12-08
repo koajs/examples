@@ -10,7 +10,8 @@
     "koa-session": "koajs/session",
     "co-busboy": "cojs/busboy",
     "save-to": "~1.0.0",
-    "raw-body": "~1.1.1"
+    "raw-body": "~1.1.1",
+    "co-fs": "~1.1.1"
   },
   "devDependencies": {
     "co": "*",

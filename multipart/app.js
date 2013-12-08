@@ -7,8 +7,8 @@
 
 var os = require('os');
 var path = require('path');
-var fs = require('fs');
 var koa = require('koa');
+var fs = require('co-fs');
 var parse = require('co-busboy');
 var saveTo = require('save-to');
 
@@ -24,7 +24,7 @@ app.use(function *(){
   var tmpdir = path.join(os.tmpdir(), uid());
 
   // make the temporary directory
-  yield fs.mkdir.bind(null, tmpdir);
+  yield fs.mkdir(tmpdir);
 
   // list of all the files
   var files = [];
@@ -34,7 +34,7 @@ app.use(function *(){
   var part;
   while (part = yield parts) {
     // filename for this part
-    files.push(file = path.join(tmpdir, part.filename))
+    files.push(file = path.join(tmpdir, part.filename));
     // save the file
     yield saveTo(part, file);
   }
