@@ -6,7 +6,7 @@
 var logger = require('koa-logger');
 var serve = require('koa-static');
 var parse = require('co-busboy');
-var koa = require('../..');
+var koa = require('koa');
 var fs = require('fs');
 var app = koa();
 
@@ -33,10 +33,10 @@ app.use(function *(next){
   if ('POST' != this.method) return yield next;
 
   // multipart upload
-  var parser = parse(this);
+  var parts = parse(this);
   var part;
 
-  while (part = yield parser.part()) {
+  while (part = yield parts) {
     var stream = fs.createWriteStream('/tmp/' + Math.random());
     part.pipe(stream);
     console.log('uploading %s -> %s', part.filename, stream.path);

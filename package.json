@@ -17,7 +17,8 @@
     "ejs": "~0.8.5",
     "swig": "~1.2.2",
     "koa-logger": "~1.0.1",
-    "koa-route": "~1.0.2"
+    "koa-route": "~1.0.2",
+    "koa-static": "~1.2.0"
   },
   "devDependencies": {
     "co": "*",
