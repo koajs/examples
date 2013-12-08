@@ -2,94 +2,34 @@ var app = require('./app');
 var request = require('supertest').agent(app.listen());
 
 describe('Body Parsing', function(){
-  describe('/json', function(){
-    describe('when POSTing JSON', function(){
-      it('should return a JSON body', function(done){
+  describe('POST /uppercase', function(){
+    describe('with JSON', function(){
+      it('should work', function(done){
         request
-        .post('/json')
-        .send({
-          message: 'hello'
-        })
+        .post('/uppercase')
+        .send({ name: 'tobi' })
         .expect(200)
-        .expect(/"message": "hello"/, done);
+        .expect({ name: 'TOBI' }, done);
       })
     })
 
-    describe('when POSTing urlencoded', function(){
-      it('should 415', function(done){
+    describe('with urlencoded', function(){
+      it('should work', function(done){
         request
-        .post('/json')
-        .send('message=hello')
-        .expect(415, done);
+        .post('/uppercase')
+        .send('name=tj')
+        .expect(200)
+        .expect({ name: 'TJ' }, done);
       })
     })
 
-    describe('when POSTing a JSON primitive', function(){
-      it('should 400', function(done){
-        request
-        .post('/json')
-        .send(JSON.stringify(null))
-        .set('Content-Type', 'application/json')
-        .expect(400, done);
-      })
-    })
 
-    describe('when POSTing with length > limit', function(){
+    describe('when length > limit', function(){
       it('should 413', function(done){
         request
         .post('/json')
-        .send({
-          some_really_long_string: Math.random()
-        })
+        .send({ name: Array(5000).join('a') })
         .expect(413, done);
-      })
-    })
-
-    describe('when POSTing an empty body', function(){
-      it('should 411', function(done){
-        request
-        .post('/json')
-        .expect(411, done);
-      })
-    })
-  })
-
-  describe('/urlencoded', function(){
-    describe('when POSTing urlencoded', function(){
-      it('should return a JSON body', function(done){
-        request
-        .post('/urlencoded')
-        .send('message=hello')
-        .expect(200)
-        .expect(/"message": "hello"/, done);
-      })
-    })
-
-    describe('when POSTing JSON', function(){
-      it('should 415', function(done){
-        request
-        .post('/urlencoded')
-        .send({
-          message: 'hello'
-        })
-        .expect(415, done);
-      })
-    })
-
-    describe('when POSTing with length > limit', function(){
-      it('should 413', function(done){
-        request
-        .post('/urlencoded')
-        .send('some_really_long_string=' + Math.random())
-        .expect(413, done);
-      })
-    })
-
-    describe('when POSTing an empty body', function(){
-      it('should 411', function(done){
-        request
-        .post('/urlencoded')
-        .expect(411, done);
       })
     })
   })
