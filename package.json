@@ -14,7 +14,10 @@
     "co-fs": "~1.1.1",
     "co-body": "0.0.1",
     "co-views": "~0.1.0",
-    "ejs": "~0.8.5"
+    "ejs": "~0.8.5",
+    "swig": "~1.2.2",
+    "koa-logger": "~1.0.1",
+    "koa-route": "~1.0.2"
   },
   "devDependencies": {
     "co": "*",
