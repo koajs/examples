@@ -12,7 +12,9 @@
     "save-to": "~1.0.0",
     "raw-body": "~1.1.1",
     "co-fs": "~1.1.1",
-    "co-body": "0.0.1"
+    "co-body": "0.0.1",
+    "co-views": "~0.1.0",
+    "ejs": "~0.8.5"
   },
   "devDependencies": {
     "co": "*",
