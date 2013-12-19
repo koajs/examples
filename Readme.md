@@ -1,4 +1,3 @@
-
 # Koa Examples
 
   A repository containing small examples to illustrate the use of Koa
@@ -6,11 +5,11 @@
 
 ## Examples
 
- - [hello-world](tree/master/hello-world) hello world application
- - [upload](tree/master/upload) multi-file uploading
- - [templates](tree/master/templates) simple view rendering
- - [stream-file](tree/master/stream-file) simple file streaming
- - [errors](tree/master/errors) error handling & propagation
- - [cookies](tree/master/cookies) cookie usage example
- - [body-parser](tree/master/body-parser) request body parsing
- - [blog](tree/master/blog) multi-route & view rendering
+ - [hello-world](https://github.com/koajs/examples/tree/master/hello-world) hello world application
+ - [upload](https://github.com/koajs/examples/tree/master/upload) multi-file uploading
+ - [templates](https://github.com/koajs/examples/tree/master/templates) simple view rendering
+ - [stream-file](https://github.com/koajs/examples/tree/master/stream-file) simple file streaming
+ - [errors](https://github.com/koajs/examples/tree/master/errors) error handling & propagation
+ - [cookies](https://github.com/koajs/examples/tree/master/cookies) cookie usage example
+ - [body-parser](https://github.com/koajs/examples/tree/master/body-parser) request body parsing
+ - [blog](https://github.com/koajs/examples/tree/master/blog) multi-route & view rendering
