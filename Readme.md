@@ -11,5 +11,5 @@
  - [stream-file](https://github.com/koajs/examples/tree/master/stream-file) simple file streaming
  - [errors](https://github.com/koajs/examples/tree/master/errors) error handling & propagation
  - [cookies](https://github.com/koajs/examples/tree/master/cookies) cookie usage example
- - [body-parser](https://github.com/koajs/examples/tree/master/body-parser) request body parsing
+ - [body-parsing](https://github.com/koajs/examples/tree/master/body-parser) request body parsing
  - [blog](https://github.com/koajs/examples/tree/master/blog) multi-route & view rendering
