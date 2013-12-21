@@ -23,6 +23,6 @@ var user = {
 
 app.use(function *(){
   this.body = yield render('user', { user: user });
-})
+});
 
 if (!module.parent) app.listen(4000);
