@@ -10,8 +10,8 @@ describe('Body Parsing', function(){
         .send({ name: 'tobi' })
         .expect(200)
         .expect({ name: 'TOBI' }, done);
-      })
-    })
+      });
+    });
 
     describe('with urlencoded', function(){
       it('should work', function(done){
@@ -20,8 +20,8 @@ describe('Body Parsing', function(){
         .send('name=tj')
         .expect(200)
         .expect({ name: 'TJ' }, done);
-      })
-    })
+      });
+    });
 
 
     describe('when length > limit', function(){
@@ -30,7 +30,16 @@ describe('Body Parsing', function(){
         .post('/json')
         .send({ name: Array(5000).join('a') })
         .expect(413, done);
-      })
-    })
-  })
-})
+      });
+    });
+
+    describe('when no name is sent', function(){
+      it('should 400', function(done){
+        request
+        .post('/uppsercase')
+        .send('age=10')
+        .expect(400, done);
+      });
+    });
+  });
+});
