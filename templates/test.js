@@ -8,6 +8,6 @@ describe('Templates', function(){
       .get('/')
       .expect(200)
       .expect('<p>Tobi is a 3 year old ferret.</p>', done);
-    })
-  })
-})
+    });
+  });
+});
