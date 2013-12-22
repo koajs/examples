@@ -14,3 +14,4 @@
  - [cookies](tree/master/cookies) cookie usage example
  - [body-parser](tree/master/body-parser) request body parsing
  - [blog](tree/master/blog) multi-route & view rendering
+ - [debugging](tree/master/debugging) middleware debugging example
