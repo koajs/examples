@@ -18,7 +18,8 @@
     "swig": "~1.2.2",
     "koa-logger": "~1.1.0",
     "koa-route": "~1.0.2",
-    "koa-static": "~1.2.0"
+    "koa-static": "~1.4.0",
+    "koa-stylus": "0.0.3"
   },
   "devDependencies": {
     "co": "*",
