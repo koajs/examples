@@ -32,5 +32,14 @@ describe('Body Parsing', function(){
         .expect(413, done);
       })
     })
+
+    describe('when no name is sent', function(){
+      it('should 400', function(done){
+        request
+        .post('/uppsercase')
+        .send('age=10')
+        .expect(400, done);
+      });
+    });
   })
 })
