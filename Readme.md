@@ -13,6 +13,7 @@
  - [cookies](https://github.com/koajs/examples/tree/master/cookies) cookie usage example
  - [body-parsing](https://github.com/koajs/examples/tree/master/body-parsing) request body parsing
  - [blog](https://github.com/koajs/examples/tree/master/blog) multi-route & view rendering
+ - [debugging](https://github.com/koajs/examples/tree/master/debugging) middleware debugging example
 
 ## Other examples
 
@@ -24,7 +25,6 @@
  - [cookies](tree/master/cookies) cookie usage example
  - [body-parser](tree/master/body-parser) request body parsing
  - [blog](tree/master/blog) multi-route & view rendering
- - [debugging](tree/master/debugging) middleware debugging example
  - [links](https://github.com/juliangruber/links) experimental content sharing and collaboration platform
  - [bigpipe](https://github.com/jonathanong/bigpipe-example) Facebook's BigPipe implementation in koa and component
  - [webcam-mjpeg-stream](https://github.com/jonathanong/webcam-mjpeg-stream) - stream JPEG snapshots from your Mac
