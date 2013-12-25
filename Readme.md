@@ -17,14 +17,10 @@
 
 ## Other examples
 
- - [hello-world](tree/master/hello-world) hello world application
- - [upload](tree/master/upload) multi-file uploading
- - [templates](tree/master/templates) simple view rendering
- - [stream-file](tree/master/stream-file) simple file streaming
- - [errors](tree/master/errors) error handling & propagation
- - [cookies](tree/master/cookies) cookie usage example
- - [body-parser](tree/master/body-parser) request body parsing
- - [blog](tree/master/blog) multi-route & view rendering
  - [links](https://github.com/juliangruber/links) experimental content sharing and collaboration platform
  - [bigpipe](https://github.com/jonathanong/bigpipe-example) Facebook's BigPipe implementation in koa and component
  - [webcam-mjpeg-stream](https://github.com/jonathanong/webcam-mjpeg-stream) - stream JPEG snapshots from your Mac
+
+## Boilerplates
+
+ - [api-boilerplate](https://github.com/koajs/api-boilerplate) - API application boilerplate
