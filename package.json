@@ -5,10 +5,10 @@
   "repository": "https://github.com/koajs/examples",
   "bugs": "https://github.com/koajs/examples/issues",
   "dependencies": {
-    "koa": "koajs/koa",
-    "koa-compose": "koajs/compose",
-    "koa-session": "koajs/session",
-    "co-busboy": "cojs/busboy",
+    "koa": "~0.1.2",
+    "koa-compose": "~2.1.0",
+    "koa-session": "~1.2.0",
+    "co-busboy": "~0.1.0",
     "save-to": "~1.0.0",
     "raw-body": "~1.1.1",
     "co-fs": "~1.1.1",
@@ -18,7 +18,7 @@
     "swig": "~1.2.2",
     "koa-logger": "~1.1.0",
     "koa-route": "~1.0.2",
-    "koa-static": "~1.2.0"
+    "koa-static": "~1.4.0"
   },
   "devDependencies": {
     "co": "*",
