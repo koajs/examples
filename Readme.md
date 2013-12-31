@@ -15,6 +15,7 @@
  - [blog](https://github.com/koajs/examples/tree/master/blog) multi-route & view rendering
  - [debugging](https://github.com/koajs/examples/tree/master/debugging) middleware debugging example
  - [vhost](https://github.com/koajs/examples/tree/master/vhost) virtual host example
+ - [conditional-middleware](https://github.com/koajs/examples/tree/master/conditional-middleware) shows how middleware may be conditionally applied
 
 ## Other examples
 
