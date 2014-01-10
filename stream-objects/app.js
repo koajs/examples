@@ -10,21 +10,21 @@ app.use(function *(){
 
   stream.on('error', this.onerror);
 
-  setTimeout(function(){
+  setImmediate(function () {
     stream.write({
       id: 1
     });
-  }, 1);
 
-  setTimeout(function(){
-    stream.write({
-      id: 2
+    setImmediate(function () {
+      stream.write({
+        id: 2
+      });
+
+      setImmediate(function () {
+        stream.end();
+      });
     });
-  }, 2);
-
-  setTimeout(function(){
-    stream.end();
-  }, 3);
+  });
 });
 
 if (!module.parent) app.listen(3000);
