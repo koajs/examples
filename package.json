@@ -5,6 +5,7 @@
   "repository": "https://github.com/koajs/examples",
   "bugs": "https://github.com/koajs/examples/issues",
   "dependencies": {
+    "co": "^3.0.0",
     "koa": "~0.2.0",
     "koa-compose": "~2.1.0",
     "koa-session": "~1.2.0",
