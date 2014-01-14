@@ -1,4 +1,3 @@
-
 var koa = require('koa');
 var app = module.exports = koa();
 
@@ -10,6 +9,8 @@ app.use(function* () {
   this.req.setTimeout(Infinity);
 
   this.type = 'text/event-stream; charset=utf-8';
+  this.set('Cache-Control', 'no-cache');
+  this.set('Connection', 'keep-alive');
 
   var body = this.body = sse();
   var stream = db.subscribe('some event');
