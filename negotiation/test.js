@@ -46,14 +46,14 @@ describe('negotiation', function() {
     });
   });
 
-  describe('prefer html in most cases', function() {
-    it('should respond with html', function(done) {
+  describe('*/*', function() {
+    it('should give precedence to the first accepted type', function(done) {
       request
       .get('/tobi')
       .set('Accept', 'Accept: text/html; q=0.9, */*; q=0.1')
       .expect(200)
-      .expect('Content-Type', /html/)
-      .expect('<h1>tobi</h1>', done);
+      .expect('Content-Type', /json/)
+      .expect('{"name":"tobi","species":"ferret"}', done);
     });
   });
 });
