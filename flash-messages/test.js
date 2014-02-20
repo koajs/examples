@@ -22,7 +22,7 @@ describe('Flash Messages', function(){
     .get('/messages')
     .expect(200)
     .expect('content-type', 'application/json')
-    .expect('[\n  "hello"\n]', done);
+    .expect('["hello"]', done);
   })
 
   it('GET should return no more messages', function(done){
