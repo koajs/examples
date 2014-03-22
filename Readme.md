@@ -20,7 +20,9 @@
 ## Other examples
 
  - [links](https://github.com/juliangruber/links) experimental content sharing and collaboration platform
- - [component-crawler](github.com/component/crawler.js) crawl users and organizations for repositories with `component.json`s
+ - [simgr-server](https://github.com/funraiseme/simgr-server) - image optimization and resizing server
+ - [gitproximus](https://github.com/jonathanong/gitproximus) - github proxy with semver and content types
+ - [component-crawler](https://github.com/component/crawler.js) crawl users and organizations for repositories with `component.json`s
  - [bigpipe](https://github.com/jonathanong/bigpipe-example) Facebook's BigPipe implementation in koa and component
  - [webcam-mjpeg-stream](https://github.com/jonathanong/webcam-mjpeg-stream) - stream JPEG snapshots from your Mac
 
