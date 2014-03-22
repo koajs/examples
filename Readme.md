@@ -17,7 +17,7 @@
  - [vhost](https://github.com/koajs/examples/tree/master/vhost) virtual host example
  - [conditional-middleware](https://github.com/koajs/examples/tree/master/conditional-middleware) shows how middleware may be conditionally applied
 
-## Other examples
+## Example Repositories
 
  - [links](https://github.com/juliangruber/links) experimental content sharing and collaboration platform
  - [simgr-server](https://github.com/funraiseme/simgr-server) - image optimization and resizing server
