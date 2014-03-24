@@ -50,7 +50,7 @@ describe('negotiation', function() {
     it('should give precedence to the first accepted type', function(done) {
       request
       .get('/tobi')
-      .set('Accept', 'Accept: text/html; q=0.9, */*; q=0.1')
+      .set('Accept', '*/*')
       .expect(200)
       .expect('Content-Type', /json/)
       .expect('{"name":"tobi","species":"ferret"}', done);
