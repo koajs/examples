@@ -30,7 +30,7 @@
     "supertest": "*"
   },
   "scripts": {
-    "test": "NODE_ENV=test make test"
+    "test": "make test"
   },
   "engines": {
     "node": ">= 11.3"
