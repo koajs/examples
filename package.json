@@ -21,7 +21,8 @@
     "raw-body": "^1.1.1",
     "save-to": "^1.0.0",
     "streaming-json-stringify": "^1.0.0",
-    "swig": "^1.2.2"
+    "swig": "^1.2.2",
+    "koa-basic-auth": "^1.1.1"
   },
   "devDependencies": {
     "co": "*",
