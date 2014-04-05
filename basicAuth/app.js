@@ -1,6 +1,6 @@
 var auth = require('koa-basic-auth');
 var koa = require('koa');
-var app = koa();
+var app = module.exports = koa();
 
 // custom 401 handling
 
