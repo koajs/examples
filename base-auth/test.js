@@ -8,8 +8,7 @@ describe('Koa Basic Auth', function(){
     it('should `throw` 401', function(done){
       request
         .get('/')
-        .expect(401)
-        .end(done);
+        .expect(401, done);
     })
   })
 
@@ -18,8 +17,7 @@ describe('Koa Basic Auth', function(){
       request
         .get('/')
         .auth('user', 'invalid password')
-        .expect(401)
-        .end(done);
+        .expect(401, done);
     })
   })
 
@@ -29,8 +27,7 @@ describe('Koa Basic Auth', function(){
         .get('/')
         .auth('tj', 'tobi')
         .expect(200)
-        .expect('secret')
-        .end(done);
+        .expect('secret', done);
     })
   })
 })
