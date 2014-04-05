@@ -22,7 +22,9 @@
     "save-to": "^1.0.0",
     "streaming-json-stringify": "^1.0.0",
     "swig": "^1.2.2",
-    "koa-basic-auth": "^1.1.1"
+    "koa-basic-auth": "^1.1.1",
+    "monk": "~0.7.1",
+    "co-monk": "~0.0.1"
   },
   "devDependencies": {
     "co": "*",
