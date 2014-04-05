@@ -33,6 +33,7 @@ app.use(function *(){
 app.on('error', function(err){
   if (process.env.NODE_ENV != 'test') {
     console.log('sent error %s to the cloud', err.message);
+    console.log(err);
   }
 });
 
