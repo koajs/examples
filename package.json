@@ -13,7 +13,9 @@
     "ejs": "^0.8.5",
     "finished": "^1.1.1",
     "koa": "^0.5.0",
+    "koa-basic-auth": "^1.1.1",
     "koa-compose": "^2.1.0",
+    "koa-csrf": "^1.0.1",
     "koa-logger": "^1.1.0",
     "koa-route": "^1.0.2",
     "koa-session": "^1.2.0",
@@ -21,8 +23,7 @@
     "raw-body": "^1.1.1",
     "save-to": "^1.0.0",
     "streaming-json-stringify": "^1.0.0",
-    "swig": "^1.2.2",
-    "koa-basic-auth": "^1.1.1"
+    "swig": "^1.2.2"
   },
   "devDependencies": {
     "co": "*",
