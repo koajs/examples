@@ -1,0 +1,12 @@
+{% extends 'layout.html' %}
+
+{% block title %}{{ post.title }}{% endblock %}
+
+{% block content %}
+  <h1>{{ post.title }}</h1>
+  <p>{{ post.body }}</p>
+  <ul>
+  	<li><a href="/post/{{ post._id.toString() }}/edit">Edit post</a></li>
+  	<li><a href="/post/{{ post._id.toString() }}/delete">Delete post</a></li>
+  </ul>
+{% endblock %}

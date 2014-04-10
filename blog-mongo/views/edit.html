@@ -1,0 +1,12 @@
+{% extends 'layout.html' %}
+
+{% block title %}{{ post.title }}{% endblock %}
+
+{% block content %}
+  <h1>Edit Post</h1>
+  <form action="/post/{{post._id.toString()}}" method="post">
+    <p><input type="text" name="title" value="{{post.title}}"></p>
+    <p><textarea name="body">{{post.body}}</textarea></p>
+    <p><input type="submit" value="Save"></p>
+  </form>
+{% endblock %}
