@@ -6,7 +6,7 @@
 var logger = require('koa-logger');
 var route = require('koa-route');
 var koa = require('koa');
-var app = koa();
+var app = module.exports = koa();
 
 // middleware
 
