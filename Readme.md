@@ -36,6 +36,7 @@
  - [bigpipe](https://github.com/jonathanong/bigpipe-example) - Facebook's BigPipe implementation in koa and component
  - [webcam-mjpeg-stream](https://github.com/jonathanong/webcam-mjpeg-stream) - stream JPEG snapshots from your Mac
  - [cnpmjs.org](https://github.com/cnpm/cnpmjs.org) - Private npm registry and web for Enterprise, base on koa, MySQL and Simple Store Service
+ - [blog-mongo](https://github.com/marcusoftnet/koablog-mongo) - the blog example from this repo, but using a MongoDb database, and tests.
 
 ## Boilerplates
 
