@@ -5,17 +5,27 @@
 
 ## Included Examples
 
- - [hello-world](https://github.com/koajs/examples/tree/master/hello-world) - hello world application
- - [upload](https://github.com/koajs/examples/tree/master/upload) - multi-file uploading
- - [templates](https://github.com/koajs/examples/tree/master/templates) - simple view rendering
- - [stream-file](https://github.com/koajs/examples/tree/master/stream-file) - simple file streaming
- - [errors](https://github.com/koajs/examples/tree/master/errors) - error handling & propagation
- - [cookies](https://github.com/koajs/examples/tree/master/cookies) - cookie usage example
- - [body-parsing](https://github.com/koajs/examples/tree/master/body-parsing) - request body parsing
- - [blog](https://github.com/koajs/examples/tree/master/blog) - multi-route & view rendering
- - [debugging](https://github.com/koajs/examples/tree/master/debugging) - middleware debugging example
- - [vhost](https://github.com/koajs/examples/tree/master/vhost) - virtual host example
- - [conditional-middleware](https://github.com/koajs/examples/tree/master/conditional-middleware) - shows how middleware may be conditionally applied
+ - [404](404) - 404 handling
+ - [base-auth](base-auth) - middleware base auth example
+ - [blog](blog) - multi-route & view rendering
+ - [body-parsing](body-parsing) - request body parsing
+ - [compose](compose) - compose middlewares example
+ - [conditional-middleware](conditional-middleware) - shows how middleware may be conditionally applied
+ - [cookies](cookies) - cookie usage example
+ - [csrf](csrf) - middleware csrf example
+ - [debugging](debugging) - middleware debugging example
+ - [errors](errors) - error handling & propagation
+ - [flash-messages](flash-messages) - flash example
+ - [hello-world](hello-world) - hello world application
+ - [multipart](multipart) - multipart example downloading files using co-busboy
+ - [negotiation](negotiation) - negotiation usage example
+ - [stream-file](stream-file) - simple file streaming
+ - [stream-objects](stream-objects) - objects streaming
+ - [stream-server-side-events](stream-server-side-events) - server side events streaming
+ - [stream-view](stream-view) - view streaming
+ - [templates](templates) - simple view rendering
+ - [upload](upload) - multi-file uploading
+ - [vhost](vhost) - virtual host example
 
 ## Example Repositories
 
