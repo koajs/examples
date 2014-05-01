@@ -1,14 +1,16 @@
 var koa = require('koa');
-var STATUS_CODES = require('http').STATUS_CODES;
 
 var app = module.exports = koa();
 
 app.use(function *pageNotFound(next){
   yield next;
-  // already handled
-  if (this.status) return;
 
+  if (404 != this.status) return;
+
+  // we need to explicitly set 404 here
+  // so that koa doesn't assign 200 on body=
   this.status = 404;
+
   switch (this.accepts('html', 'json')) {
     case 'html':
       this.type = 'html';
@@ -23,14 +25,6 @@ app.use(function *pageNotFound(next){
       this.type = 'text';
       this.body = 'Page Not Found';
   }
-})
-
-Object.keys(STATUS_CODES).forEach(function(code){
-  app.use(function *(next){
-    if (this.path !== '/' + code) return yield next;
-    this.status = parseInt(code);
-    this.body = STATUS_CODES[code];
-  })
 })
 
 if (!module.parent) app.listen(3000);
