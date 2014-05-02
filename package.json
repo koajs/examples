@@ -12,7 +12,7 @@
     "co-views": "^0.1.0",
     "ejs": "^0.8.5",
     "finished": "^1.1.1",
-    "koa": "^0.5.0",
+    "koa": "^0.6.0",
     "koa-basic-auth": "^1.1.1",
     "koa-compose": "^2.1.0",
     "koa-csrf": "^1.1.0",
