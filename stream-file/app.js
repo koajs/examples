@@ -11,9 +11,7 @@ var extname = path.extname;
 app.use(function *(){
   var path = __dirname + this.path;
   this.type = extname(path);
-  var stream = this.body = fs.createReadStream(path);
-  // avoid any possible fd leak
-  onFinished(this, stream.destroy.bind(stream));
+  this.body = fs.createReadStream(path);
 });
 
 if (!module.parent) app.listen(3000);
