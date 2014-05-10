@@ -12,7 +12,7 @@
  *   ]))
  *
  *
- * If you want to name composed middleware for debugging.
+ * If you want to named composed middleware for debugging.
  * Your code will end up looking something like:
  *
  *  var fn = compose([
