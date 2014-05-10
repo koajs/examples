@@ -3,7 +3,7 @@ var request = require('supertest').agent(app.listen());
 
 describe('Named Compose', function(){
   describe('when GET /', function(){
-    it('should say "Hello World"', function(done){
+    it('should say "all"', function(done){
       request
       .get('/')
       .expect(200)
@@ -17,7 +17,7 @@ describe('Named Compose', function(){
       .expect(200, done);
     })
 
-    it('should set X-Response-Time', function(done){
+    it('should say "status"', function(done){
       request
       .get('/status')
       .expect(200)
