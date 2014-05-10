@@ -27,7 +27,7 @@
  *  })
  *
  *
- * Or:
+ * Or set `_name` property:
  *
  *  fn._name = 'all'
  *  app.use(fn)
