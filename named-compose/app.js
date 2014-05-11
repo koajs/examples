@@ -31,7 +31,15 @@
  *
  *  fn._name = 'all'
  *  app.use(fn)
-*/
+ *
+ *
+ * Or using `function-name` node module:
+ *
+ *  $ npm install function-name
+ *
+ *  var set = require('function-name')
+ *  set(fn, 'all')
+ */
 
 
 var compose = require('koa-compose');
