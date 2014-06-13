@@ -41,3 +41,4 @@
 ## Boilerplates
 
  - [api-boilerplate](https://github.com/koajs/api-boilerplate) - API application boilerplate
+ - [component-koa-et-al-boilerplate](https://github.com/sunewt/component-koa-et-al-boilerplate) - Server/client boilerplate with component, livereload, and more
