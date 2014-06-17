@@ -6,7 +6,7 @@ describe('Flash Messages', function(){
     request
     .get('/messages')
     .expect(200)
-    .expect('content-type', 'application/json')
+    .expect('content-type', 'application/json; charset=utf-8')
     .expect('[]', done);
   })
 
@@ -21,7 +21,7 @@ describe('Flash Messages', function(){
     request
     .get('/messages')
     .expect(200)
-    .expect('content-type', 'application/json')
+    .expect('content-type', 'application/json; charset=utf-8')
     .expect('["hello"]', done);
   })
 
@@ -29,7 +29,7 @@ describe('Flash Messages', function(){
     request
     .get('/messages')
     .expect(200)
-    .expect('content-type', 'application/json')
+    .expect('content-type', 'application/json; charset=utf-8')
     .expect('[]', done);
   })
 })
