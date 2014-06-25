@@ -37,7 +37,7 @@
  - [webcam-mjpeg-stream](https://github.com/jonathanong/webcam-mjpeg-stream) - stream JPEG snapshots from your Mac
  - [cnpmjs.org](https://github.com/cnpm/cnpmjs.org) - Private npm registry and web for Enterprise, base on koa, MySQL and Simple Store Service
  - [blog-mongo](https://github.com/marcusoftnet/koablog-mongo) - the blog example from this repo, but using a MongoDb database, and tests.
-
+ - [koa-project](https://github.com/ckken/koa-project) - the blog example from this repo, using a MongoDb database, and MVC
 ## Boilerplates
 
  - [api-boilerplate](https://github.com/koajs/api-boilerplate) - API application boilerplate
