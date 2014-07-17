@@ -13,7 +13,6 @@
  - [conditional-middleware](conditional-middleware) - shows how middleware may be conditionally applied
  - [cookies](cookies) - cookie usage example
  - [csrf](csrf) - middleware csrf example
- - [debugging](debugging) - middleware debugging example
  - [errors](errors) - error handling & propagation
  - [flash-messages](flash-messages) - flash example
  - [hello-world](hello-world) - hello world application
