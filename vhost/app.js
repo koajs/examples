@@ -30,7 +30,7 @@ app.use(function *(next) {
 // composed middleware with the appropriate context.
 
 app.use(function *(next) {
-  switch (this.host) {
+  switch (this.hostname) {
     case 'example.com':
     case 'www.example.com':
       // displays `Hello from main app`
