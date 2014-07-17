@@ -1,6 +1,5 @@
 
 var koa = require('koa');
-var qs = require('querystring');
 var parse = require('co-body');
 
 var app = module.exports = koa();
