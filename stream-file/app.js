@@ -1,6 +1,4 @@
-
 var koa = require('koa');
-var onFinished = require('finished');
 var fs = require('fs');
 var app = module.exports = koa();
 var path = require('path');
