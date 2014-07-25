@@ -10,7 +10,6 @@
     "co-busboy": "^1.0.2",
     "co-fs": "^1.2.0",
     "co-views": "^0.2.0",
-    "finished": "^1.2.2",
     "koa": "^0.8.0",
     "koa-basic-auth": "^1.1.1",
     "koa-compose": "^2.3.0",
