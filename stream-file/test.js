@@ -5,14 +5,14 @@ describe('Stream File', function(){
   it('GET /app.js', function(done){
     request
     .get('/app.js')
-    .expect('content-type', 'application/javascript')
+    .expect('content-type', /application\/javascript/)
     .expect(200, done);
   });
 
   it('GET /test.js', function(done){
     request
     .get('/test.js')
-    .expect('content-type', 'application/javascript')
+    .expect('content-type', /application\/javascript/)
     .expect(200, done);
   });
 
