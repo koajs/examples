@@ -18,6 +18,6 @@ function SSE(options) {
 }
 
 SSE.prototype._transform = function (data, enc, cb) {
-  this.push('data: ' + data.toString('ut8') + '\n\n');
+  this.push('data: ' + data.toString('utf8') + '\n\n');
   cb();
 }
