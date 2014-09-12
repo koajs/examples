@@ -37,7 +37,7 @@ app.use(function *(next){
   var part;
 
   while (part = yield parts) {
-    var stream = fs.createWriteStream('/tmp/' + Math.random());
+    var stream = fs.createWriteStream('tmp/' + Math.random());
     part.pipe(stream);
     console.log('uploading %s -> %s', part.filename, stream.path);
   }
