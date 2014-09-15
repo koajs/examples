@@ -9,6 +9,7 @@ var parse = require('co-busboy');
 var koa = require('koa');
 var fs = require('fs');
 var app = koa();
+var os = require('os');
 
 // log requests
 
@@ -37,7 +38,7 @@ app.use(function *(next){
   var part;
 
   while (part = yield parts) {
-    var stream = fs.createWriteStream('/tmp/' + Math.random());
+    var stream = fs.createWriteStream(os.tmpdir() + Math.random());
     part.pipe(stream);
     console.log('uploading %s -> %s', part.filename, stream.path);
   }
