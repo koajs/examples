@@ -10,6 +10,7 @@ var koa = require('koa');
 var fs = require('fs');
 var app = koa();
 var os = require('os');
+var path = require('path');
 
 // log requests
 
@@ -38,7 +39,7 @@ app.use(function *(next){
   var part;
 
   while (part = yield parts) {
-    var stream = fs.createWriteStream(os.tmpdir() + Math.random());
+    var stream = fs.createWriteStream(path.join(os.tmpdir(), Math.random().toString()));
     part.pipe(stream);
     console.log('uploading %s -> %s', part.filename, stream.path);
   }
