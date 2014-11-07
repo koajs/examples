@@ -38,6 +38,7 @@
  - [blog-mongo](https://github.com/marcusoftnet/koablog-mongo) - the blog example from this repo, but using a MongoDb database, and tests
  - [koa-project](https://github.com/ckken/koa-project) - the blog example from this repo, using a MongoDb database, and MVC
  - [koa-rest](https://github.com/hemanth/koa-rest) - A simple app to demo REST API.
+ - [koa-bookshelf](https://github.com/Tomsqualm/koa-bookshelf) - Koa example with CRUD, using MongoDB and Heroku comptability
 
 ## Boilerplates
 
