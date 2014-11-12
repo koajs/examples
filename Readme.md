@@ -29,16 +29,15 @@
 ## Example Repositories
 
  - [links](https://github.com/juliangruber/links) - experimental content sharing and collaboration platform
- - [simgr-server](https://github.com/funraiseme/simgr-server) - image optimization and resizing server
- - [gitproximus](https://github.com/jonathanong/gitproximus) - github proxy with semver and content types
  - [component-crawler](https://github.com/component/crawler.js) - crawl users and organizations for repositories with `component.json`s
  - [bigpipe](https://github.com/jonathanong/bigpipe-example) - Facebook's BigPipe implementation in koa and component
  - [webcam-mjpeg-stream](https://github.com/jonathanong/webcam-mjpeg-stream) - stream JPEG snapshots from your Mac
  - [cnpmjs.org](https://github.com/cnpm/cnpmjs.org) - Private npm registry and web for Enterprise, base on koa, MySQL and Simple Store Service
  - [blog-mongo](https://github.com/marcusoftnet/koablog-mongo) - the blog example from this repo, but using a MongoDb database, and tests
  - [koa-project](https://github.com/ckken/koa-project) - the blog example from this repo, using a MongoDb database, and MVC
- - [koa-rest](https://github.com/hemanth/koa-rest) - A simple app to demo REST API.
+ - [koa-rest](https://github.com/hemanth/koa-rest) - A simple app to demo REST API
  - [koa-bookshelf](https://github.com/Tomsqualm/koa-bookshelf) - Koa example with CRUD, using MongoDB and Heroku comptability
+ - [todo](https://github.com/koajs/todo) - A todo example written in koa and [react](http://facebook.github.io/react/)
 
 ## Boilerplates
 
