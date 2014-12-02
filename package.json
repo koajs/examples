@@ -22,7 +22,7 @@
     "save-to": "^1.0.3",
     "streaming-json-stringify": "^1.0.0",
     "ejs": "^1.0.0",
-    "swig": "*"
+    "swig": "^1.4.2"
   },
   "devDependencies": {
     "co": "*",
