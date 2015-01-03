@@ -10,7 +10,7 @@ function View(context) {
   Readable.call(this, {});
 
   // render the view on a different loop
-  co(this.render).call(this, context.onerror);
+  co.call(this, this.render).catch(context.onerror);
 }
 
 View.prototype._read = function () {};

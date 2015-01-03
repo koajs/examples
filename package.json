@@ -5,7 +5,7 @@
   "repository": "https://github.com/koajs/examples",
   "bugs": "https://github.com/koajs/examples/issues",
   "dependencies": {
-    "co": "^3.0.6",
+    "co": "^4.1.0",
     "co-body": "0.0.2",
     "co-busboy": "^1.0.2",
     "co-fs": "^1.2.0",

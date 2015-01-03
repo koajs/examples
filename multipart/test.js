@@ -1,6 +1,5 @@
 var app = require('./app');
 var fs = require('fs');
-var co = require('co');
 var request = require('supertest').agent(app.listen());
 
 // https://github.com/mscdex/busboy/blob/master/test/test-types-multipart.js
