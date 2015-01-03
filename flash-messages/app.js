@@ -11,8 +11,7 @@ var app = module.exports = koa();
 
 // required for signed cookie sessions
 app.keys = ['key1', 'key2'];
-
-app.use(session());
+app.use(session(app));
 
 app.use(function *(next){
   if (this.method !== 'GET' || this.path !== '/messages') return yield next;

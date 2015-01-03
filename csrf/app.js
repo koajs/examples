@@ -11,7 +11,7 @@ var app = module.exports = koa();
  */
 
 app.keys = ['session key', 'csrf example'];
-app.use(session());
+app.use(session(app));
 
 /**
  * maybe a bodyparser
