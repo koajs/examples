@@ -42,4 +42,9 @@
 ## Boilerplates
 
  - [api-boilerplate](https://github.com/koajs/api-boilerplate) - API application boilerplate
- - [component-koa-et-al-boilerplate](https://github.com/sunewt/component-koa-et-al-boilerplate) - Server/client boilerplate with component, livereload, and more
+ - [component-koa-et-al-boilerplate](https://github.com/sunewt/component-koa-et-al-boilerplate) - Server/client boilerplate with component, livereload, and more  
+
+## Yeoman Generators
+ - [koa-rest](https://github.com/PatrickWolleb/generator-koa-rest) - RESTful API scaffolder with subgenerator  
+ - [koa](https://github.com/peter-vilja/generator-koa) - Web Application scaffolder
+ - [k](https://github.com/minghe/generator-k) -  Web Application scaffolder with Chinese README
