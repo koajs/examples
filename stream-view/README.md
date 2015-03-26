@@ -12,12 +12,12 @@ To see results:
 
 ## Interesting points
 
-1. The main function app.js instantiates a "View" from the view.js file.
+1. The main function of app.js instantiates a "View" from the view.js file.
 2. The View overrides the Readable's _read() function with an empty function.
 3. The View also overrides the Readable's render() function to do the following:
-  1. Immediately push out the `head` of the page
-  2. Assigns to `body` variable a promise that will soon (in the next tick) return the Hello World text.
-  3. Yields to that promise, which eventually returns the desired text
-  4. After the promise returns, it pushes out the returned text wrapped in `body` tags
-  5. It pushes out the closing `html` tag and
-  6. Closes the connection with push(null)
+  1. Immediately push out the text for the \<head> of the page
+  2. Yield to a function that will ultimately (in the next tick) return the "Hello World" text. The render() function pauses at that point.
+  3. When that function returns, render() resumes, and assigns the return value to the `body` variable
+  4. Push out the returned text wrapped in \<body> tags
+  5. Push out the closing \</html> tag and
+  6. Close the connection with push(null)
