@@ -3,12 +3,12 @@ var inherits = require('util').inherits;
 
 /**
  * Returns a new subscription event event.
- * Realy APIs would care about the `event`.
+ * Real APIs would care about the `event`.
  */
 
 exports.subscribe = function (event, options) {
   return Subscription(options);
-}
+};
 
 /**
  * Subscription stream. Just increments the result.
@@ -28,4 +28,4 @@ function Subscription(options) {
 
 Subscription.prototype._read = function () {
   while (this.push(this.value++)) {}
-}
+};

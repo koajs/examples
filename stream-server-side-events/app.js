@@ -27,4 +27,6 @@ app.use(function* () {
     socket.removeListener('error', close);
     socket.removeListener('close', close);
   }
-})
+});
+
+if (!module.parent) app.listen(3000);
