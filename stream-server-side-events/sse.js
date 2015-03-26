@@ -6,7 +6,7 @@
 var Transform = require('stream').Transform;
 var inherits = require('util').inherits;
 
-module.exports = SSE
+module.exports = SSE;
 
 inherits(SSE, Transform);
 
@@ -20,4 +20,4 @@ function SSE(options) {
 SSE.prototype._transform = function (data, enc, cb) {
   this.push('data: ' + data.toString('utf8') + '\n\n');
   cb();
-}
+};
