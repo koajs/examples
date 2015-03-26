@@ -11,6 +11,8 @@ To see results:
 
 ## Interesting points
 
-1. In app.js, the function stat() returns a thunk. When app.use() yields to fstat(), the app.use() function pauses while node (asynchronously) performs the stat() call and gets the result. When that result is available, app.use() resumes immediately  
-2. This example also uses the createReadStream() function to create a stream that reads data (asynchronously) from the file. 
-3. this.body gets that stream's data, and sends it to the web browser client that has connected in to the URL above.  
+1. The stat() function at the bottom of app.js returns another function that will call the normal fs.stat() to get information about the named file. (The function stat() is a promise - it will ultimately return a value, although it may take a while.)
+2. When any program *yields* to a function, it pauses while that function proceeds asynchronously, and eventually returns a value. When the function returns, the program resumes at that point. 
+3. In the example, app.use() starts everything off with `fstat = yield stat(path)`. This `yield` initiates the stat() function. That is, the stat() function begins to execute (asynchronously), app.use() pauses, and the node interpreter goes off to work on other tasks. When the fs.stat() call completes and returns a value, app.use() resumes, and sets the value of `fstat` to the value returned by stat().  
+4. This example also uses the createReadStream() function to create a stream which is another way to handle data (asynchronously) from a file. 
+5. `this.body` gets the result of the fs.createReadStream() (which is the stream's data) and sends it to the web browser client that has connected in to the URL above.  
