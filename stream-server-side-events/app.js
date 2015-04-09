@@ -6,7 +6,7 @@ var db = require('./db');
 
 app.use(function* () {
   // otherwise node will automatically close this connection in 2 minutes
-  this.req.setTimeout(Infinity);
+  this.req.setTimeout(Number.MAX_VALUE);
 
   this.type = 'text/event-stream; charset=utf-8';
   this.set('Cache-Control', 'no-cache');
