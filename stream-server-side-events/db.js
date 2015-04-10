@@ -27,5 +27,5 @@ function Subscription(options) {
 }
 
 Subscription.prototype._read = function () {
-  while (this.push(this.value++)) {}
+  while (this.push(String(this.value++))) {}
 };
