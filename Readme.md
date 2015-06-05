@@ -16,6 +16,7 @@
  - [errors](errors) - error handling & propagation
  - [flash-messages](flash-messages) - flash example
  - [hello-world](hello-world) - hello world application
+ - [kaio](kaio) - shows to how use [kaio](https://github.com/enten/kaio)
  - [multipart](multipart) - multipart example downloading files using co-busboy
  - [negotiation](negotiation) - negotiation usage example
  - [stream-file](stream-file) - simple file streaming
