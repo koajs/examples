@@ -10,6 +10,7 @@
     "co-busboy": "^1.0.2",
     "co-fs": "^1.2.0",
     "co-views": "^0.2.0",
+    "ejs": "^1.0.0",
     "koa": "^0.14.0",
     "koa-basic-auth": "^1.1.1",
     "koa-compose": "^2.3.0",
@@ -21,7 +22,7 @@
     "raw-body": "^1.2.1",
     "save-to": "^1.0.3",
     "streaming-json-stringify": "^1.0.0",
-    "ejs": "^1.0.0"
+    "swig": "^1.4.2"
   },
   "devDependencies": {
     "co": "*",
