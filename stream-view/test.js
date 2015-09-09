@@ -1,5 +1,6 @@
 var app = require('./app');
 var request = require('supertest').agent(app.listen());
+var should  = require('should');
 
 describe('Stream View', function(){
   it('GET /', function(done){
