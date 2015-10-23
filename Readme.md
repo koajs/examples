@@ -40,6 +40,8 @@
  - [todo](https://github.com/koajs/todo) - A todo example written in koa and [react](http://facebook.github.io/react/)
  - [koa-skeleton](https://github.com/danneu/koa-skeleton) - A simple made-to-be-forked Koa app that uses Postgres and deploys to Heroku.
      - Live demo: <https://koa-skeleton.danneu.com>
+ - [nodejs-docs-samples](https://github.com/GoogleCloudPlatform/nodejs-docs-samples/appengine/koa) - An example Koa app and tutorial for deploying to Google App Engine
+     - Live demo: <http://koa-demo.appspot.com/>
 
 ## Boilerplates
 
