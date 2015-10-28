@@ -38,7 +38,8 @@
  - [koa-rest](https://github.com/hemanth/koa-rest) - A simple app to demo REST API
  - [koa-bookshelf](https://github.com/Tomsqualm/koa-bookshelf) - Koa example with CRUD, using MongoDB and Heroku comptability
  - [todo](https://github.com/koajs/todo) - A todo example written in koa and [react](http://facebook.github.io/react/)
-
+ - [koa-skeleton](https://github.com/danneu/koa-skeleton) - A simple made-to-be-forked Koa app that uses Postgres and deploys to Heroku.
+     - Live demo: <https://koa-skeleton.danneu.com>
 
 ## Boilerplates
 
