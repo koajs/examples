@@ -27,7 +27,7 @@
   "devDependencies": {
     "co": "*",
     "mocha": "*",
-    "should": "^3.3.2",
+    "should": "^8.1.0",
     "supertest": "*"
   },
   "scripts": {
