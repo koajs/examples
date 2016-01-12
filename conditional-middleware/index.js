@@ -1,7 +1,5 @@
-
-var logger = require('koa-logger');
 var koa = require('koa');
-var app = koa();
+var app = module.exports = koa();
 
 
 // passing any middleware to this middleware
@@ -21,15 +19,22 @@ function ignoreAssets(mw) {
   }
 }
 
+function *responseTime(next) {
+  var start = new Date;
+  yield next;
+  var ms = new Date - start;
+  this.set('X-Response-Time', ms + 'ms');
+}
+
 // TRY:
 // $ curl http://localhost:3000/
 // $ curl http://localhost:3000/style.css
 // $ curl http://localhost:3000/some.html
 
-app.use(ignoreAssets(logger()));
+app.use(ignoreAssets(responseTime));
 
 app.use(function *(){
   this.body = 'Hello World';
 });
 
-app.listen(3000);
+if (!module.parent) app.listen(3000);
