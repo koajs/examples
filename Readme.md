@@ -28,6 +28,7 @@
 
 ## Example Repositories
 
+ - [muffin](https://github.com/muffinjs/server) - A content management system build on top of Koa v2
  - [links](https://github.com/juliangruber/links) - experimental content sharing and collaboration platform
  - [component-crawler](https://github.com/component/crawler.js) - crawl users and organizations for repositories with `component.json`s
  - [bigpipe](https://github.com/jonathanong/bigpipe-example) - Facebook's BigPipe implementation in koa and component
