@@ -42,6 +42,7 @@
      - Live demo: <https://koa-skeleton.danneu.com>
  - [nodejs-docs-samples](https://github.com/GoogleCloudPlatform/nodejs-docs-samples/tree/master/appengine/koa) - An example Koa app and tutorial for deploying to Google App Engine
      - Live demo: <http://koa-demo.appspot.com/>
+ - [koa-passport-mongoose-graphql](https://github.com/sibeliusseraphini/koa-passport-mongoose-graphql) - Koa 2 starterkit using mongoose, graphql setup, and authentication with passport
 
 ## Boilerplates
 
