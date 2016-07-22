@@ -1,10 +1,10 @@
 # stream-view
 
-This is a "Hello World" application, using a view that inherits from a Readable stream. 
+This is a "Hello World" application, using a view that inherits from a Readable stream.
 
 To invoke, the following command begins listening on localhost:3000.
 
-    node --harmony app.js
+    node app.js
 
 To see results:
 
