@@ -18,6 +18,6 @@ describe('Errors', function () {
 
     request
     .get('/')
-    .end(done);
+    .end(function(){});
   })
 })
