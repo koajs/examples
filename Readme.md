@@ -28,6 +28,7 @@
 
 ## Example Repositories
 
+ - [kails](https://github.com/embbnux/kails) - A Web App like Rails build with Koa v2, Webpack and Postgres
  - [muffin](https://github.com/muffinjs/server) - A content management system build on top of Koa v2
  - [links](https://github.com/juliangruber/links) - experimental content sharing and collaboration platform
  - [component-crawler](https://github.com/component/crawler.js) - crawl users and organizations for repositories with `component.json`s
