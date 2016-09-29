@@ -27,4 +27,20 @@ app.use(function *pageNotFound(next){
   }
 })
 
+app.use(function *exception(next){
+  if (this.url != '/exception') {
+    return yield next;
+  }
+
+  this.assert(false, 404);
+})
+
+app.use(function *ok(next){
+  if (this.url != '/ok') {
+    return yield next;
+  }
+
+  this.body = 'ok';
+})
+
 if (!module.parent) app.listen(3000);
