@@ -1,4 +1,4 @@
-var app = require('./');
+var app = require('./app');
 var request = require('supertest').agent(app.listen());
 
 describe('Templates', function(){
