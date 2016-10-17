@@ -1,9 +1,7 @@
 var app = require('./app');
 var request = require('supertest').agent(app.listen());
-var assert = require('assert');
 
 describe('Koa Basic Auth', function(){
-
   describe('with no credentials', function(){
     it('should `throw` 401', function(done){
       request
