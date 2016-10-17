@@ -1,6 +1,5 @@
 var app = require('./app');
 var request = require('supertest').agent(app.listen());
-var assert = require('assert');
 
 describe('Koa Basic Auth', function(){
 
