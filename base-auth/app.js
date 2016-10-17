@@ -6,7 +6,7 @@ var app = module.exports = koa();
 
 app.use(function* (next){
   try {
-    yield* next;
+    yield next;
   } catch (err) {
     if (401 == err.status) {
       this.status = 401;
