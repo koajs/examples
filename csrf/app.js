@@ -21,7 +21,7 @@ app.use(function *(next) {
   if (this.is('application/json')) {
     this.request.body = yield parse(this);
   }
-  yield* next;
+  yield next;
 });
 
 /**
