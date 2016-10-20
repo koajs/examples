@@ -18,7 +18,7 @@ app.use(logger());
 
 // custom 404
 
-app.use(function *(next){
+app.use(function *(next) {
   yield next;
   if (this.body || !this.idempotent) return;
   this.redirect('/404.html');
@@ -30,7 +30,7 @@ app.use(serve(__dirname + '/public'));
 
 // handle uploads
 
-app.use(function *(next){
+app.use(function *(next) {
   // ignore non-POSTs
   if ('POST' != this.method) return yield next;
 

@@ -8,7 +8,7 @@ var app = koa();
 // middleware may "wrap" other middleware.
 
 function ignoreAssets(mw) {
-  return function *(next){
+  return function *(next) {
     if (/(\.js|\.css|\.ico)$/.test(this.path)) {
       yield next;
     } else {
@@ -26,7 +26,7 @@ function ignoreAssets(mw) {
 
 app.use(ignoreAssets(logger()));
 
-app.use(function *(){
+app.use(function *() {
   this.body = 'Hello World';
 });
 

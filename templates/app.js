@@ -21,7 +21,7 @@ var user = {
 
 // render
 
-app.use(function *(){
+app.use(function *() {
   this.body = yield render('user', { user: user });
 });
 

@@ -1,10 +1,10 @@
 var app = require('./app');
 var request = require('supertest').agent(app.listen());;
 
-describe('Virtual Host', function(){
-  describe('www subdomain koa app', function(){
-    describe('when GET /', function(){
-      it('should say "Hello from www app"', function(done){
+describe('Virtual Host', function() {
+  describe('www subdomain koa app', function() {
+    describe('when GET /', function() {
+      it('should say "Hello from www app"', function(done) {
         request
         .get('/')
         .set('Host', 'www.example.com')
@@ -12,7 +12,7 @@ describe('Virtual Host', function(){
         .expect('Hello from www app', done);
       })
 
-      it('should set X-Custom', function(done){
+      it('should set X-Custom', function(done) {
         request
         .get('/')
         .set('Host', 'www.example.com')
@@ -21,8 +21,8 @@ describe('Virtual Host', function(){
       })
     })
 
-    describe('when GET / without subdomain', function(){
-      it('should say "Hello from www app"', function(done){
+    describe('when GET / without subdomain', function() {
+      it('should say "Hello from www app"', function(done) {
         request
           .get('/')
           .set('Host', 'example.com')
@@ -30,7 +30,7 @@ describe('Virtual Host', function(){
           .expect('Hello from www app', done);
       })
 
-      it('should set X-Custom', function(done){
+      it('should set X-Custom', function(done) {
         request
           .get('/')
           .set('Host', 'example.com')
@@ -39,8 +39,8 @@ describe('Virtual Host', function(){
       })
     })
 
-    describe('when not GET /', function(){
-      it('should 404', function(done){
+    describe('when not GET /', function() {
+      it('should 404', function(done) {
         request
         .get('/aklsjdf')
         .set('Host', 'example.com')
@@ -48,9 +48,9 @@ describe('Virtual Host', function(){
       })
     })
   })
-  describe('bar subdomain array bundle', function(){
-    describe('when GET /', function(){
-      it('should say "Howzit? From bar middleware bundle"', function(done){
+  describe('bar subdomain array bundle', function() {
+    describe('when GET /', function() {
+      it('should say "Howzit? From bar middleware bundle"', function(done) {
         request
         .get('/')
         .set('Host', 'bar.example.com')
@@ -58,7 +58,7 @@ describe('Virtual Host', function(){
         .expect('Howzit? From bar middleware bundle', done);
       })
 
-      it('should set X-Response-Time', function(done){
+      it('should set X-Response-Time', function(done) {
         request
         .get('/')
         .set('Host', 'bar.example.com')
@@ -67,8 +67,8 @@ describe('Virtual Host', function(){
       })
     })
 
-    describe('when not GET /', function(){
-      it('should 404', function(done){
+    describe('when not GET /', function() {
+      it('should 404', function(done) {
         request
         .get('/aklsjdf')
         .set('Host', 'bar.example.com')
@@ -76,9 +76,9 @@ describe('Virtual Host', function(){
       })
     })
   })
-  describe('default vhost', function(){
-    describe('when GET /', function(){
-      it('should 404', function(done){
+  describe('default vhost', function() {
+    describe('when GET /', function() {
+      it('should 404', function(done) {
         request
         .get('/')
         .set('Host', '127.0.0.1')

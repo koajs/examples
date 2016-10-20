@@ -8,7 +8,7 @@ var app = module.exports = koa();
 // co-body accepts application/json
 // and application/x-www-form-urlencoded
 
-app.use(function *(next){
+app.use(function *(next) {
   if ('POST' != this.method) return yield next;
   var body = yield parse(this, { limit: '1kb' });
   if (!body.name) this.throw(400, '.name required');

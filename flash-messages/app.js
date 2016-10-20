@@ -13,7 +13,7 @@ var app = module.exports = koa();
 app.keys = ['key1', 'key2'];
 app.use(session(app));
 
-app.use(function *(next){
+app.use(function *(next) {
   if (this.method !== 'GET' || this.path !== '/messages') return yield next;
 
   // get any messages saved in the session
@@ -24,7 +24,7 @@ app.use(function *(next){
   delete this.session.messages;
 })
 
-app.use(function *(next){
+app.use(function *(next) {
   if (this.method !== 'POST' || this.path !== '/messages') return yield next;
 
   // the request string is the flash message

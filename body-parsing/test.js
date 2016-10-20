@@ -1,10 +1,10 @@
 var app = require('./app');
 var request = require('supertest').agent(app.listen());
 
-describe('Body Parsing', function(){
-  describe('POST /uppercase', function(){
-    describe('with JSON', function(){
-      it('should work', function(done){
+describe('Body Parsing', function() {
+  describe('POST /uppercase', function() {
+    describe('with JSON', function() {
+      it('should work', function(done) {
         request
         .post('/uppercase')
         .send({ name: 'tobi' })
@@ -13,8 +13,8 @@ describe('Body Parsing', function(){
       })
     })
 
-    describe('with urlencoded', function(){
-      it('should work', function(done){
+    describe('with urlencoded', function() {
+      it('should work', function(done) {
         request
         .post('/uppercase')
         .send('name=tj')
@@ -23,8 +23,8 @@ describe('Body Parsing', function(){
       })
     })
 
-    describe('when length > limit', function(){
-      it('should 413', function(done){
+    describe('when length > limit', function() {
+      it('should 413', function(done) {
         request
         .post('/json')
         .send({ name: Array(5000).join('a') })
@@ -32,8 +32,8 @@ describe('Body Parsing', function(){
       })
     })
 
-    describe('when no name is sent', function(){
-      it('should 400', function(done){
+    describe('when no name is sent', function() {
+      it('should 400', function(done) {
         request
         .post('/uppsercase')
         .send('age=10')

@@ -18,7 +18,7 @@ var app = module.exports = koa();
 
 // x-response-time
 
-function *responseTime(next){
+function *responseTime(next) {
   var start = new Date();
   yield next;
   var ms = new Date() - start;
@@ -27,7 +27,7 @@ function *responseTime(next){
 
 // logger
 
-function* logger(next){
+function* logger(next) {
   var start = new Date();
   yield next;
   var ms = new Date() - start;
@@ -38,7 +38,7 @@ function* logger(next){
 
 // response
 
-function* respond(next){
+function* respond(next) {
   yield next;
   if ('/' != this.url) return;
   this.body = 'Hello World';

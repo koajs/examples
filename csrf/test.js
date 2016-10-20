@@ -4,9 +4,9 @@ var request = require('supertest').agent(app.listen());
 var token;
 var cookie;
 
-describe('csrf', function(){
-  describe('GET /token', function(){
-    it('should get token', function(done){
+describe('csrf', function() {
+  describe('GET /token', function() {
+    it('should get token', function(done) {
       request
       .get('/token')
       .expect(200)

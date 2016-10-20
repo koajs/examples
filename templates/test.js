@@ -1,9 +1,9 @@
 var app = require('./app');
 var request = require('supertest').agent(app.listen());
 
-describe('Templates', function(){
-  describe('GET /', function(){
-    it('should respond with a rendered view', function(done){
+describe('Templates', function() {
+  describe('GET /', function() {
+    it('should respond with a rendered view', function(done) {
       request
       .get('/')
       .expect(200)

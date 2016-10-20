@@ -14,7 +14,7 @@ var saveTo = require('save-to');
 
 var app = module.exports = koa();
 
-app.use(function *(){
+app.use(function *() {
   // parse the multipart body
   var parts = parse(this, {
     autoFields: true // saves the fields to parts.field(s)
