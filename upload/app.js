@@ -26,7 +26,7 @@ app.use(function *(next) {
 
 // serve files from ./public
 
-app.use(serve(__dirname + '/public'));
+app.use(serve(path.join(__dirname, '/public')));
 
 // handle uploads
 
