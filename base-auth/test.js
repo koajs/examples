@@ -7,8 +7,8 @@ describe('Koa Basic Auth', function() {
       request
         .get('/')
         .expect(401, done);
-    })
-  })
+    });
+  });
 
   describe('with invalid credentials', function() {
     it('should `throw` 401', function(done) {
@@ -16,8 +16,8 @@ describe('Koa Basic Auth', function() {
         .get('/')
         .auth('user', 'invalid password')
         .expect(401, done);
-    })
-  })
+    });
+  });
 
   describe('with valid credentials', function() {
     it('should call the next middleware', function(done) {
@@ -26,6 +26,6 @@ describe('Koa Basic Auth', function() {
         .auth('tj', 'tobi')
         .expect(200)
         .expect('secret', done);
-    })
-  })
-})
+    });
+  });
+});

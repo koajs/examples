@@ -34,7 +34,7 @@ describe('Blog', function() {
       .end(function(err, res) {
         if (err) return done(err);
 
-        res.header.location.should.be.equal('/')
+        res.header.location.should.be.equal('/');
         done();
       });
     });
@@ -47,8 +47,8 @@ describe('Blog', function() {
         if (err) return done(err);
 
         res.should.be.html;
-        res.text.should.include('<h1>Title</h1>')
-        res.text.should.include('<p>Contents</p>')
+        res.text.should.include('<h1>Title</h1>');
+        res.text.should.include('<p>Contents</p>');
         done();
       });
     });

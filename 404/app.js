@@ -25,6 +25,6 @@ app.use(function *pageNotFound(next) {
       this.type = 'text';
       this.body = 'Page Not Found';
   }
-})
+});
 
 if (!module.parent) app.listen(3000);

@@ -10,7 +10,7 @@ describe('Cookies Views', function() {
         .expect(200)
         .expect('Set-Cookie', new RegExp('view=' + i))
         .expect(i + ' views', done);
-      })
-    })
-  })
-})
+      });
+    });
+  });
+});

@@ -16,7 +16,7 @@ function ignoreAssets(mw) {
       // so that "this" remains the koa Context
       yield mw.call(this, next);
     }
-  }
+  };
 }
 
 // TRY:

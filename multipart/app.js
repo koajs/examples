@@ -42,7 +42,7 @@ app.use(function *() {
   // return all the filenames as an array
   // after all the files have finished downloading
   this.body = files;
-})
+});
 
 if (!module.parent) app.listen(3000);
 

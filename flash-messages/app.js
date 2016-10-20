@@ -22,7 +22,7 @@ app.use(function *(next) {
 
   // delete the messages as they've been deliverd
   delete this.session.messages;
-})
+});
 
 app.use(function *(next) {
   if (this.method !== 'POST' || this.path !== '/messages') return yield next;
@@ -38,6 +38,6 @@ app.use(function *(next) {
 
   // tell the client everything went okay
   this.status = 204;
-})
+});
 
 if (!module.parent) app.listen(3000);

@@ -30,4 +30,4 @@ module.exports = class View extends Readable {
     // end the stream
     this.push(null);
   };
-}
+};

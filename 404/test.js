@@ -9,6 +9,6 @@ describe('404', function() {
       .get('/')
       .expect(404)
       .expect(/Page Not Found/, done);
-    })
-  })
-})
+    });
+  });
+});
