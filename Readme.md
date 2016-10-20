@@ -2,6 +2,13 @@
 
   A repository containing small examples to illustrate the use of Koa
   for creating web applications and other HTTP servers.
+  
+# Running tests
+
+```bash
+make test
+make lint
+```
 
 ## Included Examples
 
