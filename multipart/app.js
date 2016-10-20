@@ -14,7 +14,7 @@ var saveTo = require('save-to');
 
 var app = module.exports = koa();
 
-app.use(function *(){
+app.use(function *() {
   // parse the multipart body
   var parts = parse(this, {
     autoFields: true // saves the fields to parts.field(s)
@@ -32,7 +32,7 @@ app.use(function *(){
 
   // yield each part as a stream
   var part;
-  while (part = yield parts) {
+  while ((part = yield parts)) {
     // filename for this part
     files.push(file = path.join(tmpdir, part.filename));
     // save the file
@@ -42,7 +42,7 @@ app.use(function *(){
   // return all the filenames as an array
   // after all the files have finished downloading
   this.body = files;
-})
+});
 
 if (!module.parent) app.listen(3000);
 

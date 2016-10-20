@@ -1,4 +1,4 @@
-
+var path = require('path');
 var views = require('co-views');
 var koa = require('koa');
 var app = module.exports = koa();
@@ -6,7 +6,7 @@ var app = module.exports = koa();
 // setup views, appending .ejs
 // when no extname is given to render()
 
-var render = views(__dirname + '/views', { ext: 'ejs' });
+var render = views(path.join(__dirname, '/views'), { ext: 'ejs' });
 
 // dummy data
 
@@ -21,7 +21,7 @@ var user = {
 
 // render
 
-app.use(function *(){
+app.use(function *() {
   this.body = yield render('user', { user: user });
 });
 

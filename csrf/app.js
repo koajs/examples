@@ -21,7 +21,7 @@ app.use(function *(next) {
   if (this.is('application/json')) {
     this.request.body = yield parse(this);
   }
-  yield* next;
+  yield next;
 });
 
 /**
@@ -30,7 +30,6 @@ app.use(function *(next) {
 
 app.use(csrf());
 
-
 /**
  * route
  */
@@ -38,7 +37,7 @@ app.use(csrf());
 app.use(route.get('/token', token));
 app.use(route.post('/post', post));
 
-function* token () {
+function* token() {
   this.body = this.csrf;
 }
 

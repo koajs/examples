@@ -6,7 +6,7 @@
 var koa = require('koa');
 var app = module.exports = koa();
 
-app.use(function *(){
+app.use(function *() {
   var n = ~~this.cookies.get('view') + 1;
   this.cookies.set('view', n);
   this.body = n + ' views';

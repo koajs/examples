@@ -2,7 +2,7 @@ var koa = require('koa');
 
 var app = module.exports = koa();
 
-app.use(function *pageNotFound(next){
+app.use(function *pageNotFound(next) {
   yield next;
 
   if (404 != this.status) return;
@@ -25,6 +25,6 @@ app.use(function *pageNotFound(next){
       this.type = 'text';
       this.body = 'Page Not Found';
   }
-})
+});
 
 if (!module.parent) app.listen(3000);

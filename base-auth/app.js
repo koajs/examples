@@ -4,7 +4,7 @@ var app = module.exports = koa();
 
 // custom 401 handling
 
-app.use(function* (next){
+app.use(function* (next) {
   try {
     yield next;
   } catch (err) {
@@ -24,7 +24,7 @@ app.use(auth({ name: 'tj', pass: 'tobi' }));
 
 // secret response
 
-app.use(function* (){
+app.use(function* () {
   this.body = 'secret';
 });
 

@@ -4,23 +4,23 @@ var JSONStream = require('streaming-json-stringify');
 
 var app = module.exports = koa();
 
-app.use(function *(){
+app.use(function *() {
   this.type = 'json';
   var stream = this.body = JSONStream();
 
   stream.on('error', this.onerror);
 
-  setImmediate(function () {
+  setImmediate(function() {
     stream.write({
       id: 1
     });
 
-    setImmediate(function () {
+    setImmediate(function() {
       stream.write({
         id: 2
       });
 
-      setImmediate(function () {
+      setImmediate(function() {
         stream.end();
       });
     });

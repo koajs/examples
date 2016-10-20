@@ -25,7 +25,7 @@ var users = {
 // may want to check the type, as it may
 // be a stream, buffer, string, etc.
 
-app.use(function *(next){
+app.use(function *(next) {
   yield next;
 
   // no body? nothing to format, early return
@@ -64,7 +64,7 @@ app.use(function *(next){
 // filter responses, in this case remove ._id
 // since it's private
 
-app.use(function *(next){
+app.use(function *(next) {
   yield next;
 
   if (!this.body) return;
@@ -75,7 +75,7 @@ app.use(function *(next){
 // try $ GET /tobi
 // try $ GET /loki
 
-app.use(function *(){
+app.use(function *() {
   var name = this.path.slice(1);
   var user = users[name];
   this.body = user;

@@ -1,8 +1,6 @@
-
 var logger = require('koa-logger');
 var koa = require('koa');
 var app = koa();
-
 
 // passing any middleware to this middleware
 // will make it conditional, and will not be used
@@ -10,7 +8,7 @@ var app = koa();
 // middleware may "wrap" other middleware.
 
 function ignoreAssets(mw) {
-  return function *(next){
+  return function *(next) {
     if (/(\.js|\.css|\.ico)$/.test(this.path)) {
       yield next;
     } else {
@@ -18,7 +16,7 @@ function ignoreAssets(mw) {
       // so that "this" remains the koa Context
       yield mw.call(this, next);
     }
-  }
+  };
 }
 
 // TRY:
@@ -28,7 +26,7 @@ function ignoreAssets(mw) {
 
 app.use(ignoreAssets(logger()));
 
-app.use(function *(){
+app.use(function *() {
   this.body = 'Hello World';
 });
 

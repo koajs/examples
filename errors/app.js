@@ -4,7 +4,7 @@ var app = module.exports = koa();
 
 // look ma, error propagation!
 
-app.use(function *(next){
+app.use(function *(next) {
   try {
     yield next;
   } catch (err) {
@@ -24,13 +24,13 @@ app.use(function *(next){
 
 // response
 
-app.use(function *(){
+app.use(function *() {
   throw new Error('boom boom');
 });
 
 // error handler
 
-app.on('error', function(err){
+app.on('error', function(err) {
   if (process.env.NODE_ENV != 'test') {
     console.log('sent error %s to the cloud', err.message);
     console.log(err);

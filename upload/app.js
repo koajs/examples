@@ -18,7 +18,7 @@ app.use(logger());
 
 // custom 404
 
-app.use(function *(next){
+app.use(function *(next) {
   yield next;
   if (this.body || !this.idempotent) return;
   this.redirect('/404.html');
@@ -26,11 +26,11 @@ app.use(function *(next){
 
 // serve files from ./public
 
-app.use(serve(__dirname + '/public'));
+app.use(serve(path.join(__dirname, '/public')));
 
 // handle uploads
 
-app.use(function *(next){
+app.use(function *(next) {
   // ignore non-POSTs
   if ('POST' != this.method) return yield next;
 
@@ -38,7 +38,7 @@ app.use(function *(next){
   var parts = parse(this);
   var part;
 
-  while (part = yield parts) {
+  while ((part = yield parts)) {
     var stream = fs.createWriteStream(path.join(os.tmpdir(), Math.random().toString()));
     part.pipe(stream);
     console.log('uploading %s -> %s', part.filename, stream.path);

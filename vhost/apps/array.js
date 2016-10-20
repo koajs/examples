@@ -1,10 +1,10 @@
 // rather than koa apps we can also use array
 // bundles of middleware to the same effect.
 
-function *responseTime(next){
-  var start = new Date;
+function *responseTime(next) {
+  var start = new Date();
   yield next;
-  var ms = new Date - start;
+  var ms = new Date() - start;
   this.set('X-Response-Time', ms + 'ms');
 }
 
