@@ -20,18 +20,18 @@ var app = module.exports = koa();
 // x-response-time
 
 function *responseTime(next){
-  var start = new Date;
+  var start = new Date();
   yield next;
-  var ms = new Date - start;
+  var ms = new Date() - start;
   this.set('X-Response-Time', ms + 'ms');
 }
 
 // logger
 
 function* logger(next){
-  var start = new Date;
+  var start = new Date();
   yield next;
-  var ms = new Date - start;
+  var ms = new Date() - start;
   if ('test' != process.env.NODE_ENV) {
     console.log('%s %s - %s', this.method, this.url, ms);
   }

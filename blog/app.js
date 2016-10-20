@@ -60,7 +60,7 @@ function *show(id) {
 function *create() {
   var post = yield parse(this);
   var id = posts.push(post) - 1;
-  post.created_at = new Date;
+  post.created_at = new Date();
   post.id = id;
   this.redirect('/');
 }

@@ -18,9 +18,9 @@ function composer(app) {
 // look ma, global response logging for all our apps!
 
 app.use(function *(next) {
-  var start = new Date;
+  var start = new Date();
   yield next;
-  var ms = new Date - start;
+  var ms = new Date() - start;
   if ('test' != process.env.NODE_ENV) {
     console.log('%s %s %s - %sms', this.host, this.method, this.url, ms);
   }
