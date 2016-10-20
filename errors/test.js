@@ -1,7 +1,7 @@
 var app = require('./app');
 var request = require('supertest').agent(app.listen());
 
-describe('Errors', function () {
+describe('Errors', function() {
   it('should catch the error', function(done){
     request
     .get('/')
@@ -10,7 +10,7 @@ describe('Errors', function () {
   })
 
   it('should emit the error on app', function(done){
-    app.once('error', function (err, ctx) {
+    app.once('error', function(err, ctx) {
       err.message.should.equal('boom boom');
       ctx.should.be.ok;
       done();

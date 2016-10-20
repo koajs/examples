@@ -10,7 +10,7 @@ describe('csrf', function(){
       request
       .get('/token')
       .expect(200)
-      .end(function (err, res) {
+      .end(function(err, res) {
         token = res.text;
         token.should.be.String;
         cookie = res.headers['set-cookie'].join(';');
@@ -19,7 +19,7 @@ describe('csrf', function(){
     });
   });
 
-  describe('POST /post', function () {
+  describe('POST /post', function() {
     it('should 403 without token', function(done) {
       request
       .post('/post')

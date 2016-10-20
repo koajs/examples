@@ -6,7 +6,7 @@ var inherits = require('util').inherits;
  * Real APIs would care about the `event`.
  */
 
-exports.subscribe = function (event, options) {
+exports.subscribe = function(event, options) {
   return Subscription(options);
 };
 
@@ -26,6 +26,6 @@ function Subscription(options) {
   this.value = 0;
 }
 
-Subscription.prototype._read = function () {
+Subscription.prototype._read = function() {
   while (this.push(String(this.value++))) {}
 };

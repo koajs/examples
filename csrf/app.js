@@ -37,7 +37,7 @@ app.use(csrf());
 app.use(route.get('/token', token));
 app.use(route.post('/post', post));
 
-function* token () {
+function* token() {
   this.body = this.csrf;
 }
 

@@ -17,7 +17,7 @@ function SSE(options) {
   Transform.call(this, options);
 }
 
-SSE.prototype._transform = function (data, enc, cb) {
+SSE.prototype._transform = function(data, enc, cb) {
   this.push('data: ' + data.toString('utf8') + '\n\n');
   cb();
 };

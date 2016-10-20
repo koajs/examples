@@ -23,7 +23,7 @@ if (!module.parent) app.listen(3000);
  */
 
 function stat(file) {
-  return function (done) {
+  return function(done) {
     fs.stat(file, done);
   };
 }

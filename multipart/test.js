@@ -26,19 +26,19 @@ var body = [
   '-----------------------------paZqsnEHRufoShdX6fh0lUhXBP4k--'
 ].join('\r\n')
 
-describe('Multipart Files', function () {
-  it('should store all the files', function (done) {
+describe('Multipart Files', function() {
+  it('should store all the files', function(done) {
     request
     .post('/')
     .set('Content-Type', ct)
     .send(body)
     .expect(200)
-    .end(function (err, res) {
+    .end(function(err, res) {
       if (err) return done(err);
 
       var files = res.body;
       files.should.have.length(2);
-      fs.stat(files[0], function (err) {
+      fs.stat(files[0], function(err) {
         if (err) return done(err);
 
         fs.stat(files[1], done);

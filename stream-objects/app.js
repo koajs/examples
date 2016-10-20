@@ -10,17 +10,17 @@ app.use(function *(){
 
   stream.on('error', this.onerror);
 
-  setImmediate(function () {
+  setImmediate(function() {
     stream.write({
       id: 1
     });
 
-    setImmediate(function () {
+    setImmediate(function() {
       stream.write({
         id: 2
       });
 
-      setImmediate(function () {
+      setImmediate(function() {
         stream.end();
       });
     });
