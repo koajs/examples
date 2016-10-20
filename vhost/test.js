@@ -1,5 +1,5 @@
 var app = require('./app');
-var request = require('supertest').agent(app.listen());;
+var request = require('supertest').agent(app.listen());
 
 describe('Virtual Host', function() {
   describe('www subdomain koa app', function() {
