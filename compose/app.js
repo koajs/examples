@@ -12,7 +12,6 @@
  *   ]))
 */
 
-
 var compose = require('koa-compose');
 var koa = require('koa');
 var app = module.exports = koa();

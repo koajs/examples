@@ -3,7 +3,6 @@
 const Readable = require('stream').Readable;
 const co = require('co');
 
-
 module.exports = class View extends Readable {
 
     constructor(context) {

@@ -1,8 +1,6 @@
-
 var logger = require('koa-logger');
 var koa = require('koa');
 var app = koa();
-
 
 // passing any middleware to this middleware
 // will make it conditional, and will not be used
