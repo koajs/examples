@@ -32,7 +32,7 @@ app.use(function *(){
 
   // yield each part as a stream
   var part;
-  while (part = yield parts) {
+  while ((part = yield parts)) {
     // filename for this part
     files.push(file = path.join(tmpdir, part.filename));
     // save the file
