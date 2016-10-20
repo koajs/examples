@@ -2,7 +2,7 @@ var app = require('./app');
 var request = require('supertest').agent(app.listen());
 
 describe('Blog', function(){
-  describe('GET /',function(){
+  describe('GET /', function(){
     it('should see title "Posts"', function(done){
       request
       .get('/')
@@ -26,7 +26,7 @@ describe('Blog', function(){
       });
     });
   });
-  describe('POST /post/new',function(){
+  describe('POST /post/new', function(){
     it('should create post and redirect to /', function(done){
       request
       .post('/post')
@@ -39,7 +39,7 @@ describe('Blog', function(){
       });
     });
   });
-  describe('GET /post/0',function(){
+  describe('GET /post/0', function(){
     it('should see post', function(done){
       request
       .get('/post/0')
