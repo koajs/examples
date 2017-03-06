@@ -1,17 +1,17 @@
-var koa = require('koa');
-var auth = require('koa-basic-auth');
-var app = module.exports = koa();
+const auth = require('koa-basic-auth');
+const Koa = require('koa');
+const app = module.exports = new Koa();
 
 // custom 401 handling
 
-app.use(function* (next) {
+app.use(async (ctx, next) => {
   try {
-    yield next;
+    await next();
   } catch (err) {
-    if (401 == err.status) {
-      this.status = 401;
-      this.set('WWW-Authenticate', 'Basic');
-      this.body = 'cant haz that';
+    if (err.status === 401) {
+      ctx.status = 401;
+      ctx.set('WWW-Authenticate', 'Basic');
+      ctx.body = 'cant haz that';
     } else {
       throw err;
     }
@@ -24,8 +24,8 @@ app.use(auth({ name: 'tj', pass: 'tobi' }));
 
 // secret response
 
-app.use(function* () {
-  this.body = 'secret';
+app.use(async ctx => {
+  ctx.body = 'secret';
 });
 
 if (!module.parent) app.listen(3000);

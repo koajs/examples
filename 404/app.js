@@ -1,29 +1,29 @@
-var koa = require('koa');
+const Koa = require('koa');
+const app = module.exports = new Koa();
 
-var app = module.exports = koa();
-
-app.use(function *pageNotFound(next) {
-  yield next;
-
-  if (404 != this.status) return;
-
-  // we need to explicitly set 404 here
-  // so that koa doesn't assign 200 on body=
-  this.status = 404;
-
-  switch (this.accepts('html', 'json')) {
-    case 'html':
-      this.type = 'html';
-      this.body = '<p>Page Not Found</p>';
-      break;
-    case 'json':
-      this.body = {
-        message: 'Page Not Found'
-      };
-      break;
-    default:
-      this.type = 'text';
-      this.body = 'Page Not Found';
+app.use(async (ctx, next) => {
+  try {
+    await next();
+    const status = ctx.status || 404;
+    if (status === 404) ctx.throw(404);
+  } catch (err) {
+    if (err.status !== 404) return;
+    ctx.status = err.status || 500;
+    switch (ctx.accepts('html', 'json')) {
+      case 'html':
+        ctx.type = 'html';
+        ctx.body = '<p>Page Not Found</p>';
+        break;
+      case 'json':
+        ctx.type = 'json';
+        ctx.body = {
+          message: 'Page Not Found'
+        };
+        break;
+      default:
+        ctx.type = 'text';
+        ctx.body = 'Page Not Found';
+    }
   }
 });
 
