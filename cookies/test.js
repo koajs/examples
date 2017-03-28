@@ -1,10 +1,10 @@
-var app = require('./app');
-var request = require('supertest').agent(app.listen());
+const app = require('./app');
+const request = require('supertest').agent(app.listen());
 
-describe('Cookies Views', function() {
-  [1, 2, 3].forEach(function(i) {
-    describe('on iteration #' + i, function() {
-      it('should set the views as a cookie and as the body', function(done) {
+describe('Cookies Views', () => {
+  [1, 2, 3].forEach(i => {
+    describe('on iteration #' + i, () => {
+      it('should set the views as a cookie and as the body', done => {
         request
         .get('/')
         .expect(200)

@@ -1,17 +1,17 @@
-var app = require('./app');
-var request = require('supertest').agent(app.listen());
+const app = require('./app');
+const request = require('supertest').agent(app.listen());
 
-describe('Koa Basic Auth', function() {
-  describe('with no credentials', function() {
-    it('should `throw` 401', function(done) {
+describe('Koa Basic Auth', () => {
+  describe('with no credentials', () => {
+    it('should `throw` 401', done => {
       request
         .get('/')
         .expect(401, done);
     });
   });
 
-  describe('with invalid credentials', function() {
-    it('should `throw` 401', function(done) {
+  describe('with invalid credentials', () => {
+    it('should `throw` 401', done => {
       request
         .get('/')
         .auth('user', 'invalid password')
@@ -19,8 +19,8 @@ describe('Koa Basic Auth', function() {
     });
   });
 
-  describe('with valid credentials', function() {
-    it('should call the next middleware', function(done) {
+  describe('with valid credentials', () => {
+    it('should call the next middleware', done => {
       request
         .get('/')
         .auth('tj', 'tobi')

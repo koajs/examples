@@ -1,44 +1,41 @@
 {
   "name": "koa-examples",
-  "description": "Examples using Koa",
+  "description": "Examples using Koa2",
   "version": "0.0.1",
   "repository": "https://github.com/koajs/examples",
   "bugs": "https://github.com/koajs/examples/issues",
   "dependencies": {
-    "co": "^4.1.0",
-    "co-body": "^1.0.0",
-    "co-busboy": "^1.0.2",
-    "co-fs": "^1.2.0",
-    "co-views": "^2.1.0",
-    "ejs": "^2.5.5",
-    "koa": "^1.0.0",
-    "koa-basic-auth": "^1.1.1",
-    "koa-compose": "^2.3.0",
-    "koa-csrf": "^2.1.1",
-    "koa-logger": "^1.2.1",
-    "koa-route": "^1.1.4",
-    "koa-session": "^3.1.0",
-    "koa-static": "^2.0.0",
-    "raw-body": "^1.2.1",
-    "save-to": "^1.0.3",
-    "streaming-json-stringify": "^1.0.0",
+    "ejs": "^2.5.6",
+    "koa": "^2.0.1",
+    "koa-basic-auth": "^2.0.0",
+    "koa-bodyparser": "^4.1.0",
+    "koa-compose": "^2.5.1",
+    "koa-convert": "^1.2.0",
+    "koa-csrf": "^3.0.4",
+    "koa-generic-session": "^1.11.5",
+    "koa-logger": "^2.0.1",
+    "koa-route": "^3.2.0",
+    "koa-router": "^5.4.0",
+    "koa-session": "^4.0.1",
+    "koa-views": "^6.0.0",
+    "raw-body": "^2.2.0",
     "swig": "^1.4.2"
   },
   "devDependencies": {
-    "co": "*",
-    "eslint": "^3.8.1",
-    "eslint-config-standard": "^6.2.0",
-    "eslint-plugin-promise": "^3.3.0",
-    "eslint-plugin-standard": "^2.0.1",
-    "mocha": "*",
+    "babel-eslint": "^7.1.1",
+    "eslint": "^3.17.0",
+    "eslint-config-standard": "^7.0.0",
+    "eslint-plugin-promise": "^3.5.0",
+    "eslint-plugin-standard": "^2.1.1",
+    "mocha": "^3.2.0",
     "should": "^3.3.2",
-    "supertest": "*"
+    "supertest": "^3.0.0"
   },
   "scripts": {
     "test": "make test"
   },
   "engines": {
-    "node": ">= 0.11.13"
+    "node": ">= 7.6.0"
   },
   "license": "MIT"
 }

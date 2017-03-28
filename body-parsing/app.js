@@ -1,18 +1,19 @@
 
-var koa = require('koa');
-var parse = require('co-body');
+const bodyParser = require('koa-bodyparser');
+const Koa = require('koa');
+const app = module.exports = new Koa();
 
-var app = module.exports = koa();
+app.use(bodyParser({'jsonLimit': '1kb'}));
 
 // POST .name to /uppercase
 // co-body accepts application/json
 // and application/x-www-form-urlencoded
 
-app.use(function *(next) {
-  if ('POST' != this.method) return yield next;
-  var body = yield parse(this, { limit: '1kb' });
-  if (!body.name) this.throw(400, '.name required');
-  this.body = { name: body.name.toUpperCase() };
+app.use(async (ctx, next) => {
+  if (ctx.method !== 'POST') await next();
+  const body = ctx.request.body;
+  if (!body.name) ctx.throw(400, '.name required');
+  ctx.body = { name: body.name.toUpperCase() };
 });
 
 if (!module.parent) app.listen(3000);
