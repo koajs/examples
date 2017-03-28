@@ -1,14 +1,13 @@
 const Koa = require('koa');
 const app = module.exports = new Koa();
 
-app.use(async (ctx, next) => {
+app.use(async function pageNotFound(ctx, next) => {
   try {
     await next();
     const status = ctx.status || 404;
     if (status === 404) ctx.throw(404);
   } catch (err) {
     if (err.status !== 404) return;
-    ctx.status = err.status || 500;
     switch (ctx.accepts('html', 'json')) {
       case 'html':
         ctx.type = 'html';
