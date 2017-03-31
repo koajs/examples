@@ -44,6 +44,7 @@ make lint
  - [cnpmjs.org](https://github.com/cnpm/cnpmjs.org) - Private npm registry and web for Enterprise, base on koa, MySQL and Simple Store Service
  - [blog-mongo](https://github.com/marcusoftnet/koablog-mongo) - the blog example from this repo, but using a MongoDb database, and tests
  - [koa-rest](https://github.com/hemanth/koa-rest) - A simple app to demo REST API
+ - [koajs-rest-skeleton](https://github.com/ria-com/node-koajs-rest-skeleton) - A simple Koa REST Skeleton Application
  - [koa-bookshelf](https://github.com/Tomsqualm/koa-bookshelf) - Koa example with CRUD, using MongoDB and Heroku comptability
  - [todo](https://github.com/koajs/todo) - A todo example written in koa and [react](http://facebook.github.io/react/)
  - [koa-skeleton](https://github.com/danneu/koa-skeleton) - A simple made-to-be-forked Koa app that uses Postgres and deploys to Heroku.
