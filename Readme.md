@@ -52,6 +52,7 @@ make lint
  - [nodejs-docs-samples](https://github.com/GoogleCloudPlatform/nodejs-docs-samples/tree/master/appengine/koa) - An example Koa app and tutorial for deploying to Google App Engine
      - Live demo: <http://koa-demo.appspot.com/>
  - [koa-passport-mongoose-graphql](https://github.com/sibeliusseraphini/koa-passport-mongoose-graphql) - Koa 2 starterkit using mongoose, graphql setup, and authentication with passport
+ - [hacknical](https://github.com/ecmadao/hacknical) - A website for github user to make a better resume, based on Koa v2, redis and mongoose.
 
 ## Boilerplates
 
