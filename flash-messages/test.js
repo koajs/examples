@@ -1,5 +1,6 @@
-var app = require('./app');
-var request = require('supertest').agent(app.listen());
+require('should');
+const app = require('./app');
+const request = require('supertest').agent(app.listen());
 
 describe('Flash Messages', function() {
   it('GET should return an empty array', function(done) {

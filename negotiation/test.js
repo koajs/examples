@@ -1,5 +1,5 @@
-var app = require('./app');
-var request = require('supertest').agent(app.listen());
+const app = require('./app');
+const request = require('supertest').agent(app.listen());
 
 describe('negotiation', function() {
   describe('json', function() {

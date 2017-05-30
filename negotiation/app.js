@@ -1,20 +1,20 @@
 
-var koa = require('koa');
-var app = module.exports = koa();
+const Koa = require('koa');
+const app = module.exports = new Koa();
 
-var tobi = {
+const tobi = {
   _id: '123',
   name: 'tobi',
   species: 'ferret'
 };
 
-var loki = {
+const loki = {
   _id: '321',
   name: 'loki',
   species: 'ferret'
 };
 
-var users = {
+const users = {
   tobi: tobi,
   loki: loki
 };
@@ -25,18 +25,18 @@ var users = {
 // may want to check the type, as it may
 // be a stream, buffer, string, etc.
 
-app.use(function *(next) {
-  yield next;
+app.use(async function(ctx, next) {
+  await next();
 
   // no body? nothing to format, early return
-  if (!this.body) return;
+  if (!ctx.body) return;
 
   // Check which type is best match by giving
   // a list of acceptable types to `req.accepts()`.
-  var type = this.accepts('json', 'html', 'xml', 'text');
+  const type = ctx.accepts('json', 'html', 'xml', 'text');
 
   // not acceptable
-  if (type === false) this.throw(406);
+  if (type === false) ctx.throw(406);
 
   // accepts json, koa handles this for us,
   // so just return
@@ -44,42 +44,41 @@ app.use(function *(next) {
 
   // accepts xml
   if (type === 'xml') {
-    this.type = 'xml';
-    this.body = '<name>' + this.body.name + '</name>';
+    ctx.type = 'xml';
+    ctx.body = '<name>' + ctx.body.name + '</name>';
     return;
   }
 
   // accepts html
   if (type === 'html') {
-    this.type = 'html';
-    this.body = '<h1>' + this.body.name + '</h1>';
+    ctx.type = 'html';
+    ctx.body = '<h1>' + ctx.body.name + '</h1>';
     return;
   }
 
   // default to text
-  this.type = 'text';
-  this.body = this.body.name;
+  ctx.type = 'text';
+  ctx.body = ctx.body.name;
 });
 
 // filter responses, in this case remove ._id
 // since it's private
 
-app.use(function *(next) {
-  yield next;
+app.use(async function(ctx, next) {
+  await next();
 
-  if (!this.body) return;
+  if (!ctx.body) return;
 
-  delete this.body._id;
+  delete ctx.body._id;
 });
 
 // try $ GET /tobi
 // try $ GET /loki
 
-app.use(function *() {
-  var name = this.path.slice(1);
-  var user = users[name];
-  this.body = user;
+app.use(async function(ctx) {
+  const name = ctx.path.slice(1);
+  const user = users[name];
+  ctx.body = user;
 });
 
 if (!module.parent) app.listen(3000);
-

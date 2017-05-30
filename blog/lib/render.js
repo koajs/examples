@@ -3,8 +3,8 @@
  * Module dependencies.
  */
 
-var views = require('co-views');
-var path = require('path');
+const views = require('koa-views');
+const path = require('path');
 
 // setup views mapping .html
 // to the swig template engine

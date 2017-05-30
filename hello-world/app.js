@@ -1,9 +1,8 @@
+const Koa = require('koa');
+const app = module.exports = new Koa();
 
-var koa = require('koa');
-var app = module.exports = koa();
-
-app.use(function *() {
-  this.body = 'Hello World';
+app.use(async function(ctx) {
+  ctx.body = 'Hello World';
 });
 
 if (!module.parent) app.listen(3000);

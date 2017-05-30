@@ -1,10 +1,10 @@
-var koa = require('koa');
-var parse = require('co-body');
-var session = require('koa-session');
-var csrf = require('koa-csrf');
-var route = require('koa-route');
+const Koa = require('koa');
+const koaBody = require('koa-body');
+const session = require('koa-session');
+const CSRF = require('koa-csrf');
+const router = require('koa-router')();
 
-var app = module.exports = koa();
+const app = module.exports = new Koa();
 
 /**
  * csrf need session
@@ -12,37 +12,33 @@ var app = module.exports = koa();
 
 app.keys = ['session key', 'csrf example'];
 app.use(session(app));
+app.use(koaBody());
 
 /**
  * maybe a bodyparser
  */
 
-app.use(function *(next) {
-  if (this.is('application/json')) {
-    this.request.body = yield parse(this);
-  }
-  yield next;
-});
-
 /**
  * csrf middleware
  */
 
-app.use(csrf());
+app.use(new CSRF());
 
 /**
  * route
  */
 
-app.use(route.get('/token', token));
-app.use(route.post('/post', post));
+router.get('/token', token)
+  .post('/post', post);
 
-function* token() {
-  this.body = this.csrf;
+app.use(router.routes());
+
+async function token(ctx) {
+  ctx.body = ctx.csrf;
 }
 
-function* post() {
-  this.body = {ok: true};
+async function post(ctx) {
+  ctx.body = {ok: true};
 }
 
 if (!module.parent) app.listen(3000);

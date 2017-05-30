@@ -12,41 +12,41 @@
  *   ]))
 */
 
-var compose = require('koa-compose');
-var koa = require('koa');
-var app = module.exports = koa();
+const compose = require('koa-compose');
+const Koa = require('koa');
+const app = module.exports = new Koa();
 
 // x-response-time
 
-function *responseTime(next) {
-  var start = new Date();
-  yield next;
-  var ms = new Date() - start;
-  this.set('X-Response-Time', ms + 'ms');
+async function responseTime(ctx, next) {
+  const start = new Date();
+  await next();
+  const ms = new Date() - start;
+  ctx.set('X-Response-Time', ms + 'ms');
 }
 
 // logger
 
-function* logger(next) {
-  var start = new Date();
-  yield next;
-  var ms = new Date() - start;
+async function logger(ctx, next) {
+  const start = new Date();
+  await next();
+  const ms = new Date() - start;
   if ('test' != process.env.NODE_ENV) {
-    console.log('%s %s - %s', this.method, this.url, ms);
+    console.log('%s %s - %s', this.method, ctx.url, ms);
   }
 }
 
 // response
 
-function* respond(next) {
-  yield next;
-  if ('/' != this.url) return;
-  this.body = 'Hello World';
+async function respond(ctx, next) {
+  await next();
+  if ('/' != ctx.url) return;
+  ctx.body = 'Hello World';
 }
 
 // composed middleware
 
-var all = compose([
+const all = compose([
   responseTime,
   logger,
   respond

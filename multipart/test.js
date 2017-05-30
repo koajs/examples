@@ -1,10 +1,11 @@
-var app = require('./app');
-var fs = require('fs');
-var request = require('supertest').agent(app.listen());
+require('should');
+const app = require('./app');
+const fs = require('fs');
+const request = require('supertest').agent(app.listen());
 
 // https://github.com/mscdex/busboy/blob/master/test/test-types-multipart.js
-var ct = 'multipart/form-data; boundary=---------------------------paZqsnEHRufoShdX6fh0lUhXBP4k';
-var body = [
+const ct = 'multipart/form-data; boundary=---------------------------paZqsnEHRufoShdX6fh0lUhXBP4k';
+const body = [
   '-----------------------------paZqsnEHRufoShdX6fh0lUhXBP4k',
   'Content-Disposition: form-data; name="file_name_0"',
   '',
@@ -36,7 +37,7 @@ describe('Multipart Files', function() {
     .end(function(err, res) {
       if (err) return done(err);
 
-      var files = res.body;
+      const files = res.body;
       files.should.have.length(2);
       fs.stat(files[0], function(err) {
         if (err) return done(err);

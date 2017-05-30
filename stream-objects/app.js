@@ -1,14 +1,14 @@
 
-var koa = require('koa');
-var JSONStream = require('streaming-json-stringify');
+const Koa = require('koa');
+const JSONStream = require('streaming-json-stringify');
 
-var app = module.exports = koa();
+const app = module.exports = new Koa();
 
-app.use(function *() {
-  this.type = 'json';
-  var stream = this.body = JSONStream();
+app.use(async function(ctx) {
+  ctx.type = 'json';
+  const stream = ctx.body = JSONStream();
 
-  stream.on('error', this.onerror);
+  stream.on('error', ctx.onerror);
 
   setImmediate(function() {
     stream.write({

@@ -1,12 +1,12 @@
-var koa = require('koa');
+const Koa = require('koa');
 
-var View = require('./view');
+const View = require('./view');
 
-var app = module.exports = koa();
+const app = module.exports = new Koa();
 
-app.use(function* () {
-  this.type = 'html';
-  this.body = new View(this);
+app.use(async function(ctx) {
+  ctx.type = 'html';
+  ctx.body = new View(ctx);
 });
 
 if (!module.parent) app.listen(3000);
