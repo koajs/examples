@@ -1,8 +1,7 @@
-
 const Koa = require('koa');
 const app = module.exports = new Koa();
 
-app.use(async function (ctx) {
+app.use(async function(ctx) {
   ctx.body = 'Hello World';
 });
 

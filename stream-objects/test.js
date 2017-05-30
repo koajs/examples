@@ -1,5 +1,5 @@
+require('should');
 const app = require('./app');
-const should = require('should');
 const request = require('supertest').agent(app.listen());
 
 describe('Stream Objects', function() {

@@ -13,7 +13,7 @@ const app = module.exports = new Koa();
 app.keys = ['key1', 'key2'];
 app.use(session(app));
 
-app.use(async function (ctx, next) {
+app.use(async function(ctx, next) {
   if (ctx.method !== 'GET' || ctx.path !== '/messages') return await next();
 
   // get any messages saved in the session
@@ -24,7 +24,7 @@ app.use(async function (ctx, next) {
   delete ctx.session.messages;
 });
 
-app.use(async function (ctx, next) {
+app.use(async function(ctx, next) {
   if (ctx.method !== 'POST' || ctx.path !== '/messages') return await next();
 
   // the request string is the flash message

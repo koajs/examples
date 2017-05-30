@@ -15,7 +15,7 @@ const app = module.exports = new Koa();
 
 app.use(koaBody({ multipart: true }));
 
-app.use(async function (ctx) {
+app.use(async function(ctx) {
   // create a temporary folder to store files
   const tmpdir = path.join(os.tmpdir(), uid());
 
@@ -30,7 +30,7 @@ app.use(async function (ctx) {
     const reader = fs.createReadStream(file.path);
     const writer = fs.createWriteStream(filePath);
     reader.pipe(writer);
-    filePaths.push(filePath)
+    filePaths.push(filePath);
   }
 
   ctx.body = filePaths;

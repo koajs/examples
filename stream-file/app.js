@@ -6,7 +6,7 @@ const extname = path.extname;
 
 // try GET /app.js
 
-app.use(async function (ctx) {
+app.use(async function(ctx) {
   const fpath = path.join(__dirname, ctx.path);
   const fstat = await stat(fpath);
 
@@ -26,10 +26,10 @@ function stat(file) {
   return new Promise(function(resolve, reject) {
     fs.stat(file, function(err, stat) {
       if (err) {
-        reject(err)
+        reject(err);
       } else {
-        resolve(stat)
+        resolve(stat);
       }
-    })
-  })
+    });
+  });
 }

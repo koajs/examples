@@ -8,13 +8,12 @@ const app = new Koa();
 // middleware may "wrap" other middleware.
 
 function ignoreAssets(mw) {
-  return async function (ctx, next) {
+  return async function(ctx, next) {
     if (/(\.js|\.css|\.ico)$/.test(ctx.path)) {
       await next();
     } else {
       // must .call() to explicitly set the receiver
-      // so that "this" remains the koa Context
-      await mw.apply(undefined, [ctx, next]);
+      await mw.call(this, ctx, next);
     }
   };
 }
@@ -26,7 +25,7 @@ function ignoreAssets(mw) {
 
 app.use(ignoreAssets(logger()));
 
-app.use(async function (ctx) {
+app.use(async function(ctx) {
   ctx.body = 'Hello World';
 });
 

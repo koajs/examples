@@ -4,7 +4,7 @@ const View = require('./view');
 
 const app = module.exports = new Koa();
 
-app.use(async function (ctx) {
+app.use(async function(ctx) {
   ctx.type = 'html';
   ctx.body = new View(ctx);
 });

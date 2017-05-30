@@ -1,12 +1,11 @@
-
 const Koa = require('koa');
 const app = module.exports = new Koa();
 
 // look ma, error propagation!
 
-app.use(async function (ctx, next) {
+app.use(async function(ctx, next) {
   try {
-    await next()
+    await next();
   } catch (err) {
     // some errors will have .status
     // however this is not a guarantee
@@ -24,7 +23,7 @@ app.use(async function (ctx, next) {
 
 // response
 
-app.use(async function () {
+app.use(async function() {
   throw new Error('boom boom');
 });
 

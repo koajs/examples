@@ -1,9 +1,8 @@
 const app = require('./app');
-const should = require('should');
 const request = require('supertest').agent(app.listen());
+require('should');
 
 describe('Blog', function() {
-
   describe('GET /', function() {
     it('should see title "Posts"', function(done) {
       request
@@ -57,5 +56,4 @@ describe('Blog', function() {
       });
     });
   });
-
 });

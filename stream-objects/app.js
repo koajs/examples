@@ -4,7 +4,7 @@ const JSONStream = require('streaming-json-stringify');
 
 const app = module.exports = new Koa();
 
-app.use(async function (ctx) {
+app.use(async function(ctx) {
   ctx.type = 'json';
   const stream = ctx.body = JSONStream();
 

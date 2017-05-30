@@ -1,6 +1,6 @@
+require('should');
 const app = require('./app');
 const fs = require('fs');
-const should = require('should');
 const request = require('supertest').agent(app.listen());
 
 // https://github.com/mscdex/busboy/blob/master/test/test-types-multipart.js

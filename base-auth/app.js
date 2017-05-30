@@ -5,7 +5,7 @@ const app = module.exports = new Koa();
 
 // custom 401 handling
 
-app.use(async function (ctx, next) {
+app.use(async function(ctx, next) {
   try {
     await next();
   } catch (err) {
@@ -25,7 +25,7 @@ app.use(auth({ name: 'tj', pass: 'tobi' }));
 
 // secret response
 
-app.use(async function (ctx) {
+app.use(async function(ctx) {
   ctx.body = 'secret';
 });
 

@@ -25,7 +25,7 @@ const users = {
 // may want to check the type, as it may
 // be a stream, buffer, string, etc.
 
-app.use(async function (ctx, next) {
+app.use(async function(ctx, next) {
   await next();
 
   // no body? nothing to format, early return
@@ -64,7 +64,7 @@ app.use(async function (ctx, next) {
 // filter responses, in this case remove ._id
 // since it's private
 
-app.use(async function (ctx, next) {
+app.use(async function(ctx, next) {
   await next();
 
   if (!ctx.body) return;
@@ -75,7 +75,7 @@ app.use(async function (ctx, next) {
 // try $ GET /tobi
 // try $ GET /loki
 
-app.use(async function (ctx) {
+app.use(async function(ctx) {
   const name = ctx.path.slice(1);
   const user = users[name];
   ctx.body = user;

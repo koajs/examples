@@ -29,15 +29,13 @@ app.use(new CSRF());
  */
 
 router.get('/token', token)
-  .post('/post', post)
-
+  .post('/post', post);
 
 app.use(router.routes());
 
 async function token(ctx) {
   ctx.body = ctx.csrf;
 }
-
 
 async function post(ctx) {
   ctx.body = {ok: true};

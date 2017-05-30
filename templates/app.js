@@ -21,7 +21,7 @@ const user = {
 
 // render
 
-app.use(async function (ctx) {
+app.use(async function(ctx) {
   await ctx.render('user', { user });
 });
 

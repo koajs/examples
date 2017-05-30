@@ -17,8 +17,7 @@ app.use(logger());
 
 app.use(render);
 
-app.use(koaBody())
-
+app.use(koaBody());
 
 // route definitions
 
@@ -26,7 +25,6 @@ router.get('/', list)
   .get('/post/new', add)
   .get('/post/:id', show)
   .post('/post', create);
-
 
 app.use(router.routes());
 
