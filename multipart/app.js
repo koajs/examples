@@ -5,43 +5,35 @@
  * as it handles file descriptor limits whereas this does not.
  */
 
-var os = require('os');
-var path = require('path');
-var koa = require('koa');
-var fs = require('co-fs');
-var parse = require('co-busboy');
-var saveTo = require('save-to');
+const os = require('os');
+const path = require('path');
+const Koa = require('koa');
+const fs = require('fs-promise');
+const koaBody = require('koa-body');
 
-var app = module.exports = koa();
+const app = module.exports = new Koa();
 
-app.use(function *() {
-  // parse the multipart body
-  var parts = parse(this, {
-    autoFields: true // saves the fields to parts.field(s)
-  });
+app.use(koaBody({ multipart: true }));
 
+app.use(async function (ctx) {
   // create a temporary folder to store files
-  var tmpdir = path.join(os.tmpdir(), uid());
+  const tmpdir = path.join(os.tmpdir(), uid());
 
   // make the temporary directory
-  yield fs.mkdir(tmpdir);
+  await fs.mkdir(tmpdir);
+  const filePaths = [];
+  const files = ctx.request.body.files || {};
 
-  // list of all the files
-  var files = [];
-  var file;
-
-  // yield each part as a stream
-  var part;
-  while ((part = yield parts)) {
-    // filename for this part
-    files.push(file = path.join(tmpdir, part.filename));
-    // save the file
-    yield saveTo(part, file);
+  for (let key in files) {
+    const file = files[key];
+    const filePath = path.join(tmpdir, file.name);
+    const reader = fs.createReadStream(file.path);
+    const writer = fs.createWriteStream(filePath);
+    reader.pipe(writer);
+    filePaths.push(filePath)
   }
 
-  // return all the filenames as an array
-  // after all the files have finished downloading
-  this.body = files;
+  ctx.body = filePaths;
 });
 
 if (!module.parent) app.listen(3000);

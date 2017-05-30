@@ -3,13 +3,13 @@
  * both as a cookie and as a response string.
  */
 
-var koa = require('koa');
-var app = module.exports = koa();
+const Koa = require('koa');
+const app = module.exports = new Koa();
 
-app.use(function *() {
-  var n = ~~this.cookies.get('view') + 1;
-  this.cookies.set('view', n);
-  this.body = n + ' views';
+app.use(async function (ctx) {
+  const n = ~~ctx.cookies.get('view') + 1;
+  ctx.cookies.set('view', n);
+  ctx.body = n + ' views';
 });
 
 if (!module.parent) app.listen(3000);

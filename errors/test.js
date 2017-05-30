@@ -1,5 +1,6 @@
-var app = require('./app');
-var request = require('supertest').agent(app.listen());
+const app = require('./app');
+const should = require('should');
+const request = require('supertest').agent(app.listen());
 
 describe('Errors', function() {
   it('should catch the error', function(done) {

@@ -1,18 +1,18 @@
-var koa = require('koa');
-var fs = require('fs');
-var app = module.exports = koa();
-var path = require('path');
-var extname = path.extname;
+const Koa = require('koa');
+const fs = require('fs');
+const app = module.exports = new Koa();
+const path = require('path');
+const extname = path.extname;
 
 // try GET /app.js
 
-app.use(function *() {
-  var fpath = path.join(__dirname, this.path);
-  var fstat = yield stat(fpath);
+app.use(async function (ctx) {
+  const fpath = path.join(__dirname, ctx.path);
+  const fstat = await stat(fpath);
 
   if (fstat.isFile()) {
-    this.type = extname(fpath);
-    this.body = fs.createReadStream(fpath);
+    ctx.type = extname(fpath);
+    ctx.body = fs.createReadStream(fpath);
   }
 });
 
@@ -23,7 +23,13 @@ if (!module.parent) app.listen(3000);
  */
 
 function stat(file) {
-  return function(done) {
-    fs.stat(file, done);
-  };
+  return new Promise(function(resolve, reject) {
+    fs.stat(file, function(err, stat) {
+      if (err) {
+        reject(err)
+      } else {
+        resolve(stat)
+      }
+    })
+  })
 }

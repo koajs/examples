@@ -22,6 +22,7 @@ module.exports = class View extends Readable {
     const body = yield done => {
       setImmediate(() => done(null, '<p>Hello World</p>'));
     };
+
     this.push('<body>' + body + '</body>');
 
     // close the document

@@ -1,18 +1,18 @@
-var koa = require('koa');
+const Koa = require('koa');
 
 // koa app
 
-var app = koa();
+const app = new Koa();
 
-app.use(function *(next) {
-  yield next;
-  this.set('X-Custom', 'Dub Dub Dub App');
+app.use(async function (ctx, next) {
+  await next();
+  ctx.set('X-Custom', 'Dub Dub Dub App');
 });
 
-app.use(function *(next) {
-  yield next;
-  if ('/' != this.url) return;
-  this.body = 'Hello from www app';
+app.use(async function (ctx, next) {
+  await next();
+  if ('/' != ctx.url) return;
+  ctx.body = 'Hello from www app';
 });
 
 module.exports = app;

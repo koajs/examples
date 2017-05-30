@@ -1,16 +1,16 @@
-var path = require('path');
-var views = require('co-views');
-var koa = require('koa');
-var app = module.exports = koa();
+const path = require('path');
+const views = require('koa-views');
+const Koa = require('koa');
+const app = module.exports = new Koa();
 
 // setup views, appending .ejs
 // when no extname is given to render()
 
-var render = views(path.join(__dirname, '/views'), { ext: 'ejs' });
+app.use(views(path.join(__dirname, '/views'), { extension: 'ejs' }));
 
 // dummy data
 
-var user = {
+const user = {
   name: {
     first: 'Tobi',
     last: 'Holowaychuk'
@@ -21,8 +21,8 @@ var user = {
 
 // render
 
-app.use(function *() {
-  this.body = yield render('user', { user: user });
+app.use(async function (ctx) {
+  await ctx.render('user', { user });
 });
 
-if (!module.parent) app.listen(4000);
+if (!module.parent) app.listen(3000);

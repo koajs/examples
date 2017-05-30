@@ -1,8 +1,9 @@
-var app = require('./app');
-var request = require('supertest').agent(app.listen());
+const app = require('./app');
+const should = require('should');
+const request = require('supertest').agent(app.listen());
 
-var token;
-var cookie;
+let token;
+let cookie;
 
 describe('csrf', function() {
   describe('GET /token', function() {

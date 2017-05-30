@@ -1,17 +1,17 @@
 // rather than koa apps we can also use array
 // bundles of middleware to the same effect.
 
-function *responseTime(next) {
-  var start = new Date();
-  yield next;
-  var ms = new Date() - start;
-  this.set('X-Response-Time', ms + 'ms');
+async function responseTime(ctx, next) {
+  const start = new Date();
+  await next();
+  const ms = new Date() - start;
+  ctx.set('X-Response-Time', ms + 'ms');
 }
 
-function *index(next) {
-  yield next;
-  if ('/' != this.url) return;
-  this.body = 'Howzit? From bar middleware bundle';
+async function index(ctx, next) {
+  await next();
+  if ('/' != ctx.url) return;
+  ctx.body = 'Howzit? From bar middleware bundle';
 }
 
 module.exports = [

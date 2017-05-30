@@ -1,19 +1,21 @@
-var app = require('./app');
-var request = require('supertest').agent(app.listen());
+const app = require('./app');
+const should = require('should');
+const request = require('supertest').agent(app.listen());
 
 describe('Blog', function() {
+
   describe('GET /', function() {
     it('should see title "Posts"', function(done) {
       request
       .get('/')
       .expect(200, function(err, res) {
         if (err) return done(err);
-
         res.should.be.html;
         res.text.should.include('<title>Posts</title>');
         done();
       });
     });
+
     it('should see 0 post', function(done) {
       request
       .get('/')
@@ -26,6 +28,7 @@ describe('Blog', function() {
       });
     });
   });
+
   describe('POST /post/new', function() {
     it('should create post and redirect to /', function(done) {
       request
@@ -39,6 +42,7 @@ describe('Blog', function() {
       });
     });
   });
+
   describe('GET /post/0', function() {
     it('should see post', function(done) {
       request
@@ -53,4 +57,5 @@ describe('Blog', function() {
       });
     });
   });
+
 });
