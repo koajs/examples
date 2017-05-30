@@ -27,7 +27,7 @@
     "eslint-plugin-promise": "^3.3.0",
     "eslint-plugin-standard": "^2.0.1",
     "mocha": "*",
-    "should": "^3.3.2",
+    "should": "^8.2.0",
     "supertest": "*"
   },
   "scripts": {
