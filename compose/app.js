@@ -32,7 +32,7 @@ async function logger(ctx, next) {
   await next();
   const ms = new Date() - start;
   if ('test' != process.env.NODE_ENV) {
-    console.log('%s %s - %s', this.method, ctx.url, ms);
+    console.log('%s %s - %s', ctx.method, ctx.url, ms);
   }
 }
 
