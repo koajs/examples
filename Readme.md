@@ -2,7 +2,7 @@
 
   A repository containing small examples to illustrate the use of Koa
   for creating web applications and other HTTP servers.
-  
+
 # Running tests
 
 ```bash
@@ -53,14 +53,15 @@ make lint
      - Live demo: <http://koa-demo.appspot.com/>
  - [koa-passport-mongoose-graphql](https://github.com/sibeliusseraphini/koa-passport-mongoose-graphql) - Koa 2 starterkit using mongoose, graphql setup, and authentication with passport
  - [hacknical](https://github.com/ecmadao/hacknical) - A website for github user to make a better resume, based on Koa v2, redis and mongoose.
+ - [koa-vue-notes-api](https://github.com/johndatserakis/koa-vue-notes-api) - A fleshed-out SPA using Koa 2.3 on the backend and Vue 2.4 on the frontend. Includes fully featured user-authentication components, CRUD actions for the user's notes, and async/await.
 
 ## Boilerplates
 
  - [koa2-boilerplate](https://github.com/geekplux/koa2-boilerplate) - A minimal boilerplate of koa v2 development
  - [api-boilerplate](https://github.com/koajs/api-boilerplate) - API application boilerplate
- - [component-koa-et-al-boilerplate](https://github.com/sunewt/component-koa-et-al-boilerplate) - Server/client boilerplate with component, livereload, and more  
+ - [component-koa-et-al-boilerplate](https://github.com/sunewt/component-koa-et-al-boilerplate) - Server/client boilerplate with component, livereload, and more
 
 ## Yeoman Generators
- - [koa-rest](https://github.com/PatrickWolleb/generator-koa-rest) - RESTful API scaffolder with subgenerator  
+ - [koa-rest](https://github.com/PatrickWolleb/generator-koa-rest) - RESTful API scaffolder with subgenerator
  - [koa](https://github.com/peter-vilja/generator-koa) - Web Application scaffolder
  - [k](https://github.com/minghe/generator-k) -  Web Application scaffolder with Chinese README
