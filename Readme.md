@@ -35,6 +35,7 @@ make lint
 
 ## Example Repositories
 
+ - [coko](https://github.com/bhaskarmelkani/coko) - A minimal convention over configuration framework/boilerplate for Koa 2.
  - [kails](https://github.com/embbnux/kails) - A Web App like Rails build with Koa v2, Webpack and Postgres
  - [muffin](https://github.com/muffinjs/server) - A content management system build on top of Koa v2
  - [links](https://github.com/juliangruber/links) - experimental content sharing and collaboration platform
