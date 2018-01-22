@@ -1,7 +1,8 @@
 require('should');
-const app = require('./app');
 const fs = require('fs');
-const request = require('supertest').agent(app.listen());
+const app = require('./app');
+const server = app.listen();
+const request = require('supertest').agent(server);
 
 // https://github.com/mscdex/busboy/blob/master/test/test-types-multipart.js
 const ct = 'multipart/form-data; boundary=---------------------------paZqsnEHRufoShdX6fh0lUhXBP4k';
@@ -28,6 +29,10 @@ const body = [
 ].join('\r\n');
 
 describe('Multipart Files', function() {
+  after(function() {
+    server.close();
+  });
+
   it('should store all the files', function(done) {
     request
     .post('/')

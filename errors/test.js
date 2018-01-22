@@ -1,8 +1,13 @@
 require('should');
 const app = require('./app');
-const request = require('supertest').agent(app.listen());
+const server = app.listen();
+const request = require('supertest').agent(server);
 
 describe('Errors', function() {
+  after(function() {
+    server.close();
+  });
+
   it('should catch the error', function(done) {
     request
     .get('/')

@@ -1,8 +1,13 @@
 require('should');
 const app = require('./app');
-const request = require('supertest').agent(app.listen());
+const server = app.listen();
+const request = require('supertest').agent(server);
 
 describe('Stream View', function() {
+  after(function() {
+    server.close();
+  });
+
   it('GET /', function(done) {
     request
     .get('/')
