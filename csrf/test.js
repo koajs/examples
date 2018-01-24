@@ -1,11 +1,16 @@
 require('should');
 const app = require('./app');
-const request = require('supertest').agent(app.listen());
+const server = app.listen();
+const request = require('supertest').agent(server);
 
 let token;
 let cookie;
 
 describe('csrf', function() {
+  after(function() {
+    server.close();
+  });
+
   describe('GET /token', function() {
     it('should get token', function(done) {
       request

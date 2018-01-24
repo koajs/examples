@@ -1,7 +1,12 @@
-var app = require('./app');
-var request = require('supertest').agent(app.listen());
+const app = require('./app');
+const server = app.listen();
+const request = require('supertest').agent(server);
 
 describe('Body Parsing', function() {
+  after(function() {
+    server.close();
+  });
+
   describe('POST /uppercase', function() {
     describe('with JSON', function() {
       it('should work', function(done) {

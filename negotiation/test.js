@@ -1,7 +1,12 @@
 const app = require('./app');
-const request = require('supertest').agent(app.listen());
+const server = app.listen();
+const request = require('supertest').agent(server);
 
 describe('negotiation', function() {
+  after(function() {
+    server.close();
+  });
+
   describe('json', function() {
     it('should respond with json', function(done) {
       request

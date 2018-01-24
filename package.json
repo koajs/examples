@@ -18,7 +18,6 @@
     "koa-static": "^3.0.0",
     "koa-views": "^6.0.2",
     "streaming-json-stringify": "^3.1.0",
-    "supertest": "^3.0.0",
     "swig": "^1.4.2"
   },
   "devDependencies": {
@@ -26,9 +25,9 @@
     "eslint-config-standard": "^6.2.0",
     "eslint-plugin-promise": "^3.3.0",
     "eslint-plugin-standard": "^2.0.1",
-    "mocha": "*",
+    "mocha": "^5.0.0",
     "should": "^3.3.2",
-    "supertest": "*"
+    "supertest": "^3.0.0"
   },
   "scripts": {
     "test": "make test"

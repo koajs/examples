@@ -1,7 +1,12 @@
-var app = require('./app');
-var request = require('supertest').agent(app.listen());
+const app = require('./app');
+const server = app.listen();
+const request = require('supertest').agent(server);
 
 describe('Virtual Host', function() {
+  after(function() {
+    server.close();
+  });
+
   describe('www subdomain koa app', function() {
     describe('when GET /', function() {
       it('should say "Hello from www app"', function(done) {

@@ -1,8 +1,13 @@
-const app = require('./app');
-const request = require('supertest').agent(app.listen());
 require('should');
+const app = require('./app');
+const server = app.listen();
+const request = require('supertest').agent(server);
 
 describe('Blog', function() {
+  after(function() {
+    server.close();
+  });
+
   describe('GET /', function() {
     it('should see title "Posts"', function(done) {
       request

@@ -1,7 +1,12 @@
 const app = require('./app');
-const request = require('supertest').agent(app.listen());
+const server = app.listen();
+const request = require('supertest').agent(server);
 
 describe('Compose', function() {
+  after(function() {
+    server.close();
+  });
+
   describe('when GET /', function() {
     it('should say "Hello World"', function(done) {
       request
