@@ -66,3 +66,8 @@ make lint
  - [koa-rest](https://github.com/PatrickWolleb/generator-koa-rest) - RESTful API scaffolder with subgenerator
  - [koa](https://github.com/peter-vilja/generator-koa) - Web Application scaffolder
  - [k](https://github.com/minghe/generator-k) -  Web Application scaffolder with Chinese README
+ 
+ ## Articles
+
+- [Building a RESTful API with Koa and Postgres](http://mherman.org/blog/2017/08/23/building-a-restful-api-with-koa-and-postgres)
+- [User Authentication with Passport and Koa](http://mherman.org/blog/2018/01/02/user-authentication-with-passport-and-koa)
