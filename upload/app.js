@@ -36,11 +36,21 @@ app.use(async function(ctx, next) {
   // ignore non-POSTs
   if ('POST' != ctx.method) return await next();
 
-  const file = ctx.request.body.files.file;
-  const reader = fs.createReadStream(file.path);
-  const stream = fs.createWriteStream(path.join(os.tmpdir(), Math.random().toString()));
-  reader.pipe(stream);
-  console.log('uploading %s -> %s', file.name, stream.path);
+  const files = ctx.request.body.files.file;
+  if (files instanceof Array) {
+    files.forEach(function(file, index) {
+      const reader = fs.createReadStream(file.path);
+      const stream = fs.createWriteStream(path.join(os.tmpdir(), Math.random().toString()));
+      reader.pipe(stream);
+      console.log('uploading %s -> %s', file.name, stream.path);
+    });
+  } else {
+    const file = files;
+    const reader = fs.createReadStream(file.path);
+    const stream = fs.createWriteStream(path.join(os.tmpdir(), Math.random().toString()));
+    reader.pipe(stream);
+    console.log('uploading %s -> %s', file.name, stream.path);
+  }
 
   ctx.redirect('/');
 });
