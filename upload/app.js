@@ -36,7 +36,7 @@ app.use(async function(ctx, next) {
   // ignore non-POSTs
   if ('POST' != ctx.method) return await next();
 
-  const file = ctx.request.files.file;
+  const file = ctx.request.body.files.file;
   const reader = fs.createReadStream(file.path);
   const stream = fs.createWriteStream(path.join(os.tmpdir(), Math.random().toString()));
   reader.pipe(stream);
