@@ -22,7 +22,7 @@ app.use(async function(ctx) {
   // make the temporary directory
   await fs.mkdir(tmpdir);
   const filePaths = [];
-  const files = ctx.request.body.files || {};
+  const files = ctx.request.files || {};
 
   for (let key in files) {
     const file = files[key];
