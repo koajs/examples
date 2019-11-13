@@ -3,6 +3,7 @@ const koaBody = require('koa-body');
 const session = require('koa-session');
 const CSRF = require('koa-csrf');
 const router = require('koa-router')();
+const Keygrip = require('keygrip');
 
 const app = module.exports = new Koa();
 
@@ -10,7 +11,7 @@ const app = module.exports = new Koa();
  * csrf need session
  */
 
-app.keys = ['session key', 'csrf example'];
+app.keys = new Keygrip(['insert 64 bytes random string', 'insert another 64 bytes random string'], 'sha512');
 app.use(session(app));
 app.use(koaBody());
 

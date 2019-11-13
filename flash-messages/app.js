@@ -6,11 +6,12 @@
 const Koa = require('koa');
 const rawBody = require('raw-body');
 const session = require('koa-session');
+const Keygrip = require('keygrip');
 
 const app = module.exports = new Koa();
 
 // required for signed cookie sessions
-app.keys = ['key1', 'key2'];
+app.keys = new Keygrip(['insert 64 bytes random string', 'insert another 64 bytes random string'], 'sha512');
 app.use(session(app));
 
 app.use(async function(ctx, next) {
