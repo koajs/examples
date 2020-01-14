@@ -2,7 +2,7 @@ const Koa = require('koa');
 const koaBody = require('koa-body');
 const session = require('koa-session');
 const CSRF = require('koa-csrf');
-const router = require('koa-router')();
+const router = require('@koa/router')();
 
 const app = module.exports = new Koa();
 
