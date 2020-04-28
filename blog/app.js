@@ -1,7 +1,7 @@
 
 const render = require('./lib/render');
 const logger = require('koa-logger');
-const router = require('koa-router')();
+const router = require('@koa/router')();
 const koaBody = require('koa-body');
 
 const Koa = require('koa');
