@@ -6,8 +6,8 @@
 # Running tests
 
 ```bash
-make test
-make lint
+npm test
+npm run lint
 ```
 
 ## Included Examples
