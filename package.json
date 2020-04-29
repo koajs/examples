@@ -31,7 +31,8 @@
     "supertest": "^3.0.0"
   },
   "scripts": {
-    "test": "make test"
+    "test": "NODE_ENV=test mocha --harmony --reporter spec --require should */test.js",
+    "lint": "eslint ."
   },
   "engines": {
     "node": ">= 7.6"
