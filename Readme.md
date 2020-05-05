@@ -32,6 +32,7 @@ npm run lint
  - [templates](templates) - simple view rendering
  - [upload](upload) - multi-file uploading
  - [vhost](vhost) - virtual host example
+ - [GraphQL-API](GraphQL-API) - A simple GraphQL API 
 
 ## Example Repositories
 

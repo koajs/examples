@@ -1,0 +1,27 @@
+{
+  "name": "koa-graphql",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "server": "nodemon ./server/index.js --exec babel-node"
+  },
+  "keywords": [],
+  "author": "Fernando Santos",
+  "license": "ISC",
+  "dependencies": {
+    "babel-preset-stage-2": "^6.24.1",
+    "graphql": "^14.5.8",
+    "koa": "^2.8.1",
+    "koa-bodyparser": "^4.2.1",
+    "koa-graphql": "^0.8.0",
+    "koa-logger": "^3.2.1",
+    "koa-mount": "^4.0.0",
+    "koa-respond": "^2.1.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "mongoose": "^5.7.1"
+  }
+}
