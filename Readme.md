@@ -56,7 +56,8 @@ npm run lint
  - [hacknical](https://github.com/ecmadao/hacknical) - A website for github user to make a better resume, based on Koa v2, redis and mongoose.
  - [koa-vue-notes-api](https://github.com/johndatserakis/koa-vue-notes-api) - A fleshed-out SPA using Koa 2.3 on the backend and Vue 2.4 on the frontend. Includes fully featured user-authentication components, CRUD actions for the user's notes, and async/await.
  - [koa-typescript-node](https://github.com/Talento90/typescript-node) - Template for building nodejs and typescript services. Features: MySql, Migrations, Docker, Unit & Integration Tests, JWT authentication, authorization, graceful shutdown, Prettier.
-
+ - [typescript-koa-mongoose-starter](https://github.com/ptariche/typescript-koa-mongoose-starter) - Another template for building nodejs and typescript services: Features: Mongoose, Docker, Tests, JWT Authentication, authorization, input/output validation with JOI.
+ 
 ## Boilerplates
 
  - [koa2-boilerplate](https://github.com/geekplux/koa2-boilerplate) - A minimal boilerplate of koa v2 development
