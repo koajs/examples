@@ -63,6 +63,7 @@ npm run lint
  - [api-boilerplate](https://github.com/koajs/api-boilerplate) - API application boilerplate
  - [component-koa-et-al-boilerplate](https://github.com/sunewt/component-koa-et-al-boilerplate) - Server/client boilerplate with component, livereload, and more
  - [koa-typescript-starter](https://github.com/ddimaria/koa-typescript-starter) - A Koa2 starter kit using TypeScript, ES6 imports/exports, Travis, Coveralls, Jasmine, Chai, Istanbul/NYC, Lodash, Nodemon, Docker, & Swagger
+ - [koa2-typescript-guide](https://github.com/WittBulter/koa2-typescript-guide) The best practice of building Koa2 with TypeScript
 
 ## Yeoman Generators
  - [koa-rest](https://github.com/PatrickWolleb/generator-koa-rest) - RESTful API scaffolder with subgenerator
