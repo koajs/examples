@@ -23,4 +23,4 @@ app.use(async function pageNotFound(ctx) {
   }
 });
 
-if (!module.parent) app.listen(3000);
+if (require.main === module) app.listen(3000);
