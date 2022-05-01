@@ -5,7 +5,7 @@
   "repository": "https://github.com/koajs/examples",
   "bugs": "https://github.com/koajs/examples/issues",
   "dependencies": {
-    "ejs": "^2.5.6",
+    "ejs": "^3.1.7",
     "fs-promise": "^2.0.3",
     "koa": "^2.2.0",
     "koa-basic-auth": "^2.0.0",
