@@ -6,9 +6,9 @@
  */
 
 const os = require('os');
+const fs = require('fs');
 const path = require('path');
 const Koa = require('koa');
-const fs = require('fs-promise');
 const koaBody = require('koa-body');
 
 const app = module.exports = new Koa();
@@ -20,7 +20,7 @@ app.use(async function(ctx) {
   const tmpdir = path.join(os.tmpdir(), uid());
 
   // make the temporary directory
-  await fs.mkdir(tmpdir);
+  await fs.promises.mkdir(tmpdir);
   const filePaths = [];
   const files = ctx.request.files || {};
 
