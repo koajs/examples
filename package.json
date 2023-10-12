@@ -21,11 +21,10 @@
     "swig-templates": "^2.0.3"
   },
   "devDependencies": {
-    "eslint": "^3.8.1",
+    "eslint": "^8.51.0",
     "eslint-config-koa": "^2.0.2",
-    "eslint-config-standard": "^6.2.0",
-    "eslint-plugin-promise": "^3.3.0",
-    "eslint-plugin-standard": "^2.0.1",
+    "eslint-config-standard": "^17.1.0",
+    "eslint-plugin-promise": "^6.1.1",
     "mocha": "^5.0.0",
     "should": "^3.3.2",
     "supertest": "^3.0.0"
