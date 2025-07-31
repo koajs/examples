@@ -7,7 +7,7 @@
   "dependencies": {
     "ejs": "^2.5.6",
     "fs-promise": "^2.0.3",
-    "koa": "^2.2.0",
+    "koa": "^3.0.1",
     "koa-basic-auth": "^2.0.0",
     "koa-body": "^4.0.8",
     "koa-compose": "^4.0.0",
