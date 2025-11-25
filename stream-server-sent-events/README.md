@@ -1,4 +1,4 @@
-# stream-server-side-events
+# stream-server-sent-events
 
 This program continually sends events to the web browser. It simulates a series of log file entries that have been appended to a file.
 

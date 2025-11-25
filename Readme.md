@@ -27,7 +27,7 @@ npm run lint
  - [negotiation](negotiation) - negotiation usage example
  - [stream-file](stream-file) - simple file streaming
  - [stream-objects](stream-objects) - objects streaming
- - [stream-server-side-events](stream-server-side-events) - server side events streaming
+ - [stream-server-sent-events](stream-server-sent-events) - server sent events streaming
  - [stream-view](stream-view) - view streaming
  - [templates](templates) - simple view rendering
  - [upload](upload) - multi-file uploading
@@ -69,7 +69,7 @@ npm run lint
  - [koa-rest](https://github.com/PatrickWolleb/generator-koa-rest) - RESTful API scaffolder with subgenerator
  - [koa](https://github.com/peter-vilja/generator-koa) - Web Application scaffolder
  - [k](https://github.com/minghe/generator-k) -  Web Application scaffolder with Chinese README
- 
+
  ## Articles
 
 - [Building a RESTful API with Koa and Postgres](http://mherman.org/blog/2017/08/23/building-a-restful-api-with-koa-and-postgres)
